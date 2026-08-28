@@ -1,0 +1,100 @@
+site_name: Workday Mastery Path
+site_description: A structured, module-wise Workday HCM and Financials training program from entry level to master level, covering navigation, business processes, staffing, compensation, security, reporting, and integrations.
+site_url: https://sigilipelli.github.io/workday-mastery-path/
+repo_url: https://github.com/SIGILIPELLI/workday-mastery-path
+repo_name: workday-mastery-path
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Privacy Policy: privacy.md
+  - "Level 1 · Entry":
+      - Overview: level-1/index.md
+      - "01 · What Is Workday?": level-1/01-what-is-workday.md
+      - "02 · Navigating the Workday UI": level-1/02-navigating-the-workday-ui.md
+      - "03 · Core HCM Concepts": level-1/03-core-hcm-concepts.md
+      - "04 · Business Processes Basics": level-1/04-business-processes-basics.md
+      - "05 · Staffing Fundamentals": level-1/05-staffing-fundamentals.md
+      - "06 · Compensation Basics": level-1/06-compensation-basics.md
+      - "07 · Reporting Basics": level-1/07-reporting-basics.md
+      - "08 · Security Basics": level-1/08-security-basics.md
+      - "09 · Integration Basics Overview": level-1/09-integration-basics-overview.md
+      - "10 · Project — Org Structure & Hire BP Design": level-1/10-project-org-structure-hire-bp.md
+  - "Level 2 · Intermediate":
+      - Overview: level-2/index.md
+      - "01 · Advanced Business Process Configuration": level-2/01-advanced-bp-configuration.md
+      - "02 · Organization Management Deep Dive": level-2/02-organization-management-deep-dive.md
+      - "03 · Advanced Staffing": level-2/03-advanced-staffing.md
+      - "04 · Compensation & Benefits Deep Dive": level-2/04-compensation-benefits-deep-dive.md
+      - "05 · Advanced Reporting": level-2/05-advanced-reporting.md
+      - "06 · Workday Studio & EIB Basics": level-2/06-workday-studio-eib-basics.md
+      - "07 · Security Groups Deep Dive": level-2/07-security-groups-deep-dive.md
+      - "08 · Talent & Performance Management": level-2/08-talent-performance-management.md
+      - "09 · Absence & Time Tracking": level-2/09-absence-time-tracking.md
+      - "10 · Project — Configure a Compensation Package": level-2/10-project-compensation-package.md
+  - "Level 3 · Advanced":
+      - Overview: level-3/index.md
+      - "01 · Advanced Integrations": level-3/01-advanced-integrations.md
+      - "02 · Advanced Security Configuration": level-3/02-advanced-security-configuration.md
+      - "03 · Workday Financials Basics": level-3/03-workday-financials-basics.md
+      - "04 · Payroll Fundamentals": level-3/04-payroll-fundamentals.md
+      - "05 · Advanced Calculated Fields": level-3/05-advanced-calculated-fields.md
+      - "06 · Recruiting Module Deep Dive": level-3/06-recruiting-module-deep-dive.md
+      - "07 · Learning Module Basics": level-3/07-learning-module-basics.md
+      - "08 · Workday Extend Basics": level-3/08-workday-extend-basics.md
+      - "09 · Testing & Change Management in Workday": level-3/09-testing-change-management.md
+      - "10 · Project — Integration Specification Document": level-3/10-project-integration-spec.md
+  - "Level 4 · Master":
+      - Overview: level-4/index.md
+      - "01 · Enterprise Workday Architecture": level-4/01-enterprise-workday-architecture.md
+      - "02 · Multi-Country/Global Deployments": level-4/02-multi-country-global-deployments.md
+      - "03 · Advanced Workday Financials": level-4/03-advanced-workday-financials.md
+      - "04 · Workday Prism Analytics": level-4/04-workday-prism-analytics.md
+      - "05 · Advanced Extend Development": level-4/05-advanced-extend-development.md
+      - "06 · Workday Certification Prep": level-4/06-workday-certification-prep.md
+      - "07 · Change Management for Workday Rollouts": level-4/07-change-management-rollouts.md
+      - "08 · Implementation Lifecycle & Project Management": level-4/08-implementation-lifecycle-pm.md
+      - "09 · Career Growth: Workday Analyst/Consultant Path": level-4/09-career-growth-analyst-consultant.md
+      - "10 · Capstone — Full Workday Implementation Plan": level-4/10-capstone-implementation-plan.md
