@@ -1,8 +1,8 @@
 site_name: Workday Mastery Path
 site_description: A structured, module-wise Workday HCM and Financials training program from entry level to master level, covering navigation, business processes, staffing, compensation, security, reporting, and integrations.
-site_url: https://sigilipelli.github.io/workday-mastery-path/
-repo_url: https://github.com/SIGILIPELLI/workday-mastery-path
-repo_name: workday-mastery-path
+site_url: https://sigilipelli.github.io/workday-skillmastery/
+repo_url: https://github.com/SIGILIPELLI/workday-skillmastery
+repo_name: workday-skillmastery
 
 theme:
   name: material
