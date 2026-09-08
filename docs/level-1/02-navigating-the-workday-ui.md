@@ -121,6 +121,53 @@ Notice that steps 3 and 4 use two different navigation habits — inbox for
 looking for* — and a fluent Workday user switches between them constantly
 without thinking about it.
 
+## How It Actually Works
+
+The UI patterns in this module are not independent features bolted onto
+Workday — they are all thin views over the same object-based data model and
+its security layer, which is why they behave so consistently.
+
+**Worklets are security-group-filtered menus, not hard-coded pages.** A
+worklet's visible content is generated at render time by evaluating, for
+the logged-in user's security group memberships, which task and report
+business objects that user is authorized to access, then grouping the
+authorized ones under the worklet's category. This is the same underlying
+access-control evaluation covered in depth in Module 8 — the worklet grid
+you see is a *rendering* of a security decision, not a separate
+configuration surface. Two workers in the same tenant see different tiles
+because they resolve to different sets of authorized objects, not because
+anyone manually built two different home pages.
+
+**Related Actions is a per-instance, per-object-type capability list.**
+When you click the related actions icon on a specific worker, Workday
+identifies the business object type of that instance (`Worker`), looks up
+every registered action definition that operates on `Worker` objects, and
+filters that list down to the ones your security group grants for that
+domain. This is why the menu contents differ by object type (a
+`Position`'s related actions menu offers different categories than a
+`Worker`'s) and why the *same* action can appear or vanish for two
+different workers you view it on, if a business process rule or security
+domain constraint evaluates differently for their specific organization or
+job profile.
+
+**The inbox is a live queue over business process step instances.** Every
+in-flight business process (Hire, Change Job, Request Time Off) exists as a
+runtime instance moving through the ordered steps defined in its business
+process definition (Module 4 covers how those steps and routing rules are
+authored). Your inbox query is effectively "find every step instance
+currently pointing at me as the assigned approver, reviewer, or to-do
+owner." When you approve an item, you're not just clearing a UI
+notification — you're advancing that specific process instance to its next
+configured step, which may itself route to a different approver based on
+conditional rules evaluated against the transaction's data at that moment.
+
+Understanding navigation this way pays off later: once you configure
+security groups or business processes yourself, you'll be able to predict
+*exactly* which worklets, related actions, and inbox items a given worker
+will see, because all three are deterministic functions of the same
+underlying object model, security grants, and process definitions — not
+separate systems to reason about independently.
+
 ## Cheat sheet
 
 | I want to... | Use this |

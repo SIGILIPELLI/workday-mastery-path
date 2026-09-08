@@ -99,6 +99,51 @@ vendor:
    Module 8's least-access principle applied to integrations rather than
    human security groups.
 
+## How It Actually Works
+
+An EIB is best understood as a small, config-defined **pipeline** with
+three distinct mechanical stages — extraction, transformation, delivery —
+each operating on a well-defined data shape, and understanding those
+stages precisely is what separates "I ran an EIB once" from actually
+diagnosing why an integration produced the wrong output.
+
+**Outbound extraction is a live query against the same object graph
+Modules 3 and 7 already covered — not a separate export process.** An
+outbound EIB's data source is a custom report, which means extraction
+inherits everything from Module 7's reporting mechanism: it's a traversal
+of business object relationships (`Worker → Position →
+Supervisory_Organization`, etc.), filtered and as-of-dated exactly like any
+other report. This is precisely why an EIB scheduled to run nightly and
+filtered to "Hire Date = yesterday" reliably picks up Jordan's hire without
+anyone updating the integration's own configuration — the report
+definition re-executes against current data every run, the same way any
+report would.
+
+**Transformation operates field-by-field against a defined output schema,
+using a mapping layer independent of the extraction query.** Once Workday's
+internal field values are extracted (an internal location code like
+"DCW-01"), the transformation stage applies configured mapping rules —
+lookup tables, conditional logic, format conversions — to reshape those
+values into whatever schema the destination system's file format
+specifies. Because the mapping layer is separate from the extraction query,
+the same underlying `Worker` and `Location` data can feed multiple
+integrations that each transform it differently for different destination
+systems (a badge vendor's site codes vs. a benefits carrier's plan codes),
+without the extraction logic needing to know anything about either
+destination's format.
+
+**Field selection at extraction time is the actual enforcement mechanism
+behind least-access integration design — not a policy note added after the
+fact.** Because an outbound EIB's data source is a report, and a report can
+only return fields the report's author explicitly includes in its
+definition, the "badge vendor never receives compensation" guarantee isn't
+a promise enforced by trusting the vendor — it's structurally true because
+compensation was never part of the extraction query's field list in the
+first place. This mirrors Module 8's domain-scoping logic applied to
+machine-to-machine integrations instead of human security groups: the
+safest integration design constrains what's extracted, rather than
+extracting broadly and hoping downstream handling is careful.
+
 ## Cheat sheet
 
 | Term | One-line definition |

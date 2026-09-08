@@ -110,6 +110,53 @@ have automatically inserted an extra approval step — no one had to remember
 to route it differently, because the condition rule handles that
 automatically based on the data entered in step 2.
 
+## How It Actually Works
+
+The behavior described above — one definition, many instances, each
+potentially taking a different path — is possible because a business
+process definition and a business process **event instance** are stored as
+separate objects that reference each other, and the routing engine
+re-evaluates the definition's rules against each instance's live data every
+time it needs to decide what happens next.
+
+**Step evaluation order is deterministic and sequential, not parallel by
+default.** The BP definition stores its steps as an ordered list. The
+runtime engine that drives a specific instance forward maintains a pointer
+to "the current step," and only evaluates the *next* step's routing (who it
+assigns to, whether a condition skips it) once the current step completes.
+This is why send-back exists as a genuinely different action from deny:
+send-back doesn't cancel the instance, it moves the pointer backward to an
+earlier step in the same ordered list, and the instance re-traverses
+forward from there — including re-evaluating any condition rules along the
+way, since the underlying transaction data may have changed.
+
+**Condition rules are evaluated against the transaction's field values at
+the moment each condition step is reached, not fixed at initiation.** This
+is a subtle but important mechanical point: the "is the proposed pay rate
+within the grade's standard range" check in the Hire example above doesn't
+run once, at the start, and lock in a path. It runs when the process
+reaches that specific condition point, reading whatever value is on the
+transaction *at that moment*. If an earlier step in the same instance
+modified the relevant field (say, an approver corrected the proposed pay
+rate during their review before approving), the condition rule downstream
+sees the corrected value, not the originally-entered one. This is also why
+condition rules are written against specific business object fields rather
+than against free-text descriptions — the rule engine needs a typed,
+addressable field to evaluate a comparison against.
+
+**Step-to-approver resolution happens at runtime, not at definition time.**
+When a BP definition assigns a step to "the manager of this position" or
+"the HR Partner security group for this supervisory organization," no
+actual person is stored in the definition. At the moment the instance
+reaches that step, the engine resolves the role reference against the
+*current* organizational and security-group data — walking the same
+`Worker → Position → Supervisory_Organization` relationships from Module 3
+to find who currently holds that role. This is precisely why a
+reorganization that changes DC West's director takes effect on in-flight
+transactions immediately: there's no cached approver name anywhere in the
+process instance, only a role reference that gets re-resolved every time
+it's needed.
+
 ## Cheat sheet
 
 | Term | One-line definition |

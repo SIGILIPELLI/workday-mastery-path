@@ -103,6 +103,53 @@ transaction:
    manually unless the tenant has configured grade-based automatic plan
    assignment.
 
+## How It Actually Works
+
+Compensation in Workday is a layered object graph — package, plan, grade,
+and grade profile are each distinct business objects with their own
+relationships — and the layering is what lets one platform express "hourly
+retail pay" and "salaried-plus-bonus executive pay" with the same
+mechanism instead of separate systems.
+
+**A Compensation Package doesn't store pay values itself — it's a
+relationship container pointing at plan assignments.** The package object
+holds references to one or more `Compensation_Plan` instances (base pay,
+bonus, merit, allowance), and each of those plan-assignment relationships
+carries its own effective-dated amount or rate. This is why a promotion can
+change comp basis, grade, and bonus eligibility "in one transaction" while
+still being auditable as discrete changes: the Job Change event doesn't
+mutate one number, it creates a new set of effective-dated plan-assignment
+records under the worker's package, and the old set remains queryable for
+history exactly like the organization-assignment records from Module 5.
+
+**Compensation Grade is the object that Module 4's condition rules
+actually evaluate against — not a hardcoded percentage.** When a business
+process step checks "is the proposed rate within range," the rule doesn't
+contain the dollar figures directly; it resolves the worker's (or
+position's) assigned `Compensation_Grade` object, reads that grade's
+minimum/maximum attributes as of the transaction's effective date, and
+compares the proposed amount against those attributes. Because the
+comparison is a live lookup against the grade object rather than a value
+baked into the rule, updating Grade 5's range tenant-wide (say, an annual
+market adjustment to all grade bands) automatically changes what triggers
+an exception approval for every future transaction, with zero changes
+needed to the business process definition itself.
+
+**Change reason is a categorization attribute on the compensation event,
+not a separate transaction type, and it's what makes downstream aggregate
+reporting trustworthy.** Merit, Promotion, Market Adjustment, and Equity
+Adjustment all create the same kind of underlying compensation-change
+event record; the only structural difference is which value is written to
+the event's change-reason attribute. Because that attribute is captured at
+the point of the transaction rather than inferred later, a report that
+sums "merit budget spend" can filter strictly on that attribute and exclude
+promotion-driven increases with certainty — the alternative, inferring
+intent after the fact from the size or direction of a pay change, would be
+unreliable. This is the same durable pattern you'll see again in Module 7:
+Workday captures the *business meaning* of an event as structured data at
+the moment it happens, rather than leaving reporting to reconstruct meaning
+from raw numbers later.
+
 ## Cheat sheet
 
 | Term | One-line definition |

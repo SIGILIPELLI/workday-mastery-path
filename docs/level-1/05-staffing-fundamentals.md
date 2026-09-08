@@ -100,6 +100,57 @@ reference the *same* underlying worker record, which is why a "worker
 history" report on Jordan (Module 7) can show every one of these events on
 a single timeline.
 
+## How It Actually Works
+
+Hire, Transfer, and Termination all look like different screens, but
+mechanically they are the same pattern applied to different business
+object relationships: each one creates a new, dated **staffing event**
+record that establishes or ends a relationship between a `Worker` object
+and a `Position`/`Supervisory_Organization` object, without ever deleting
+the prior relationship record.
+
+**Every staffing change is additive, effective-dated data — never an
+overwrite.** When Jordan transfers from DC West to Store 118, Workday does
+not update a single "current supervisory org" field on Jordan's `Worker`
+record and discard the old value. It writes a new organization-assignment
+record with an effective date, alongside the prior one. The concept of
+"Jordan's current org" is therefore not a stored value at all — it's a
+*calculated* result: query all of Jordan's organization-assignment records,
+find the one whose effective date is most recent as of the date you're
+asking about, and return that. This is exactly the mechanism referenced in
+Module 3's reorg-preservation box, and it's why a report run "as of" a past
+date returns Jordan's DC West assignment even after the Boise transfer has
+happened — the query simply resolves to a different record for that date.
+
+**A pure transfer and a promotion-with-transfer route differently because
+they change different relationships, which condition rules can detect.** A
+pure transfer only changes the `Worker → Supervisory_Organization`
+relationship. A promotion-with-transfer also changes the `Worker →
+Position` relationship to a position tied to a different compensation
+grade. The Job Change business process's condition rules (Module 4's
+mechanism) inspect which underlying relationships the specific transaction
+instance is changing — and specifically whether the new position's
+compensation grade differs from the old one — to decide whether to insert
+the compensation approval step. The routing difference isn't a special
+case Workday hardcodes for "promotions"; it falls directly out of applying
+the same grade-comparison condition rule to whatever relationship changes
+happened to be submitted.
+
+**Termination doesn't delete the worker record — it changes the worker's
+status attribute and lets that status drive every downstream calculation.**
+The `Worker` object persists (for legal, historical, and re-hire-eligibility
+reasons); a Termination event sets an active-status attribute and an
+end-employment date on the worker's employment record. Every downstream
+system that reacts to termination — benefits eligibility calculations,
+payroll's final-pay processing, an integration that deprovisions system
+access — is really just a separate process reading that same status
+attribute and reacting to its change, not a chain of explicit "and also do
+X" instructions baked into the Termination business process itself. This is
+why a worker's full history (all staffing events, still attached to one
+persistent `Worker` object) can be reported on as a single timeline even
+after termination: nothing about the worker's past relationships was ever
+removed, only a status attribute was set.
+
 ## Cheat sheet
 
 | Transaction | What it does | Common approval pattern |

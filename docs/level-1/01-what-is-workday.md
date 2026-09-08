@@ -109,6 +109,52 @@ future change, and who owns configuration — is the same first pass a real
 Workday analyst runs on day one of any engagement, and it's the lens the
 rest of this course will keep coming back to.
 
+## How It Actually Works
+
+Everything in Workday — every worker, position, organization, business
+process, and report — is ultimately a row (or set of related rows) in an
+**object-based data model**, not a set of flat database tables you'd
+recognize from a traditional relational HR system. Workday calls these
+**business objects**: `Worker`, `Position`, `Supervisory_Organization`,
+`Compensation_Package`, and thousands more. Each business object type
+defines a fixed set of attributes and, critically, a fixed set of
+**relationships** to other business object types — a `Worker` object
+relates to a `Position` object, which relates to a `Supervisory
+Organization` object, which relates to a `Location` object, and so on. This
+web of typed relationships is what lets Workday answer a question like "who
+are all the workers in DC West as of last March" without you writing a
+join — the relationship between `Worker` and `Supervisory_Organization` is
+already part of the object model, and Workday's calculation engine walks it
+for you.
+
+The single-tenant-per-customer architecture matters here for a subtle
+reason beyond "your data is isolated": every tenant runs against the
+**same object model definitions**. When Workday ships a feature release,
+it can extend the business object schema (add a new attribute to `Worker`,
+say) for every tenant simultaneously, because no tenant has forked the
+underlying schema with custom columns the way an on-premise system might
+accumulate over years. What *does* vary per tenant is the **configuration
+layer** sitting on top of that fixed object model — which business
+processes are active, how security groups are defined, which calculated
+fields exist. This is precisely why "you cannot permanently break Workday's
+underlying code": the object model and its relationships are platform-level
+and immutable from a customer's seat; only the configuration referencing
+those objects is yours to change.
+
+This distinction — fixed object model plus a customer-owned configuration
+layer — is the mechanism behind nearly everything covered later in this
+course. A business process doesn't invent a new way to move data; it
+defines an approval path for an **event** that creates or changes instances
+of business objects (a Hire event creates a `Worker` and a `Position`
+assignment). A security group doesn't invent new data boundaries; it grants
+or denies access to instances of business objects and their relationships.
+Once you can see Workday as "a fixed graph of business object types, with a
+per-tenant configuration layer governing who can trigger changes to
+instances of that graph and how those changes route for approval," the rest
+of the platform stops looking like a collection of unrelated screens and
+starts looking like one consistent mechanism applied to different object
+types.
+
 ## Cheat sheet
 
 | Concept | Key idea |

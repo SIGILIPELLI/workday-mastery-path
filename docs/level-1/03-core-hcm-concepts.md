@@ -123,6 +123,57 @@ for any new organization being built out in a tenant — and it's the
 template the Module 10 project will ask you to complete for a structure of
 your own design.
 
+## How It Actually Works
+
+Organizations, supervisory hierarchies, positions, jobs, and workers are
+not separate features — they are distinct **business object types**
+connected by explicit, typed relationships in Workday's object model, and
+almost every business rule in the platform is really a rule about walking
+those relationships.
+
+**A supervisory organization is a business object with a `Superior`
+relationship to another supervisory organization.** The nested tree you saw
+for Meridian isn't a display convenience; it *is* the data structure. Each
+`Supervisory_Organization` instance stores a reference to its parent
+org, and Workday's org-hierarchy calculations (org chart rendering, roll-up
+reporting, security scoping "by organization and subordinates") all work by
+recursively traversing that parent reference. This is also the mechanism
+behind the reorg-preservation behavior: Workday doesn't overwrite the
+parent reference when a reorg happens — it creates a new, dated
+**organization-assignment effective record**. Every relationship between a
+`Worker` and their `Supervisory_Organization`, and between a
+`Supervisory_Organization` and its parent, carries an effective date, so a
+report "as of" a prior date resolves the relationship as it existed on that
+date rather than reading a single current value. This effective-dating
+mechanism is a platform-wide pattern, not something specific to
+organizations — you'll see it again for compensation, security, and staffing.
+
+**Position Management vs. Job Management is a configuration flag on the
+supervisory organization that changes which object gets created and
+persisted.** Under Position Management, a `Position` business object exists
+as a standing record the moment it's approved, independent of whether a
+`Worker` currently fills it — the `Position` object has its own identity,
+budget attributes, and history, and a Hire event *fills* an existing
+`Position` instance rather than creating one. Under Job Management, no
+persistent vacant-position record exists; the Hire event itself creates the
+job assignment relationship directly between the `Worker` and the
+supervisory organization, with no intermediate object to track when
+unfilled. This is exactly why Position Management "requires selecting an
+existing position" during Hire (you're pointing the transaction at an
+already-existing object) while Job Management lets you define the job
+inline (you're creating the only object involved, in the same transaction).
+
+**Employee and Contingent Worker are two subtypes of the same `Worker`
+object type, not two different object types.** Both share the base worker
+schema (name, supervisory org relationship, position/job relationship), but
+contingent workers lack the relationships that connect a worker to
+`Compensation_Package` and benefit-plan objects — those relationships
+simply aren't populated for that subtype, which is why converting a
+contingent worker to an employee is handled as its own formal business
+process: it's the moment those missing relationships get established for
+the first time on a worker record that already exists, rather than a
+worker record being created from scratch.
+
 ## Cheat sheet
 
 | Term | One-line definition |

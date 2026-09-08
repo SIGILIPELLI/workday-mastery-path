@@ -101,6 +101,54 @@ is exactly the kind of table a security architect fills in during
 Level 2's Security Groups Deep Dive, before it's ever built inside the
 tenant.
 
+## How It Actually Works
+
+Every access decision in Workday — whether a worklet tile renders, whether
+a related action appears, whether a report even runs — resolves down to
+the same evaluation performed against the same domain/group grant records,
+executed fresh at the moment of the request rather than cached from login.
+
+**Access control is evaluated as an intersection, not a single lookup:
+group membership × domain grant × scope.** When Priya opens an employee's
+compensation history, Workday doesn't check a single "can Priya see this"
+flag. It resolves, in order: (1) which security groups Priya currently
+belongs to, by evaluating her role assignments against the live
+organizational data from Module 3 (a role-based group's membership is
+itself a query, re-run each time, not a static list); (2) which Domain
+Security Policies grant those groups access to the "Worker Data:
+Compensation" domain, and at what level (View, Modify); (3) whether the
+grant's configured **scope** — often "own supervisory organization and
+subordinates" — covers the specific worker instance being requested, by
+walking the same supervisory-org relationship tree from Module 3. Only if
+all three resolve favorably does the action succeed. This is why revoking
+Priya's HR Partner role assignment (a Module 3/5-style organizational
+change) instantly removes her compensation access with zero separate
+security administration step — the group membership that access depended
+on was never a static grant, it was a live query against her current role.
+
+**Domains exist to let one grant cover many related actions/fields at
+once, because checking permission field-by-field or action-by-action
+wouldn't scale.** A domain bundles a set of secured items (specific report
+fields, specific business process actions, specific worker attributes)
+that share a sensitivity profile, so a single Domain Security Policy
+grant/revoke changes access to the entire bundle atomically. This is the
+mechanism behind compensation living in its own domain separate from
+general worker data: it lets a tenant grant broad View access to ordinary
+worker attributes while withholding the compensation bundle specifically,
+using one additional policy rather than hundreds of individual field-level
+grants.
+
+**Scope is what turns a role-based grant into a properly bounded one
+rather than an all-or-nothing switch.** The same "HR Partner" security
+group definition, with the same domain grants, produces different visible
+data for two different HR Partners because the grant's scope clause is
+evaluated against *each user's own* organizational position — "their
+assigned supervisory organizations and subordinates" resolves differently
+per person. This is exactly why the Store Operations Analyst worked example
+above scopes every row to "the analyst's assigned region": the scope clause
+is what prevents one role definition, reused for every regional analyst,
+from accidentally granting company-wide visibility to all of them.
+
 ## Cheat sheet
 
 | Term | One-line definition |
