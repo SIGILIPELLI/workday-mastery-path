@@ -874,6 +874,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2250,6 +2261,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2429,6 +2451,52 @@ over roughly 18 months:</p>
 reference the <em>same</em> underlying worker record, which is why a "worker
 history" report on Jordan (Module 7) can show every one of these events on
 a single timeline.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Hire, Transfer, and Termination all look like different screens, but
+mechanically they are the same pattern applied to different business
+object relationships: each one creates a new, dated <strong>staffing event</strong>
+record that establishes or ends a relationship between a <code>Worker</code> object
+and a <code>Position</code>/<code>Supervisory_Organization</code> object, without ever deleting
+the prior relationship record.</p>
+<p><strong>Every staffing change is additive, effective-dated data — never an
+overwrite.</strong> When Jordan transfers from DC West to Store 118, Workday does
+not update a single "current supervisory org" field on Jordan's <code>Worker</code>
+record and discard the old value. It writes a new organization-assignment
+record with an effective date, alongside the prior one. The concept of
+"Jordan's current org" is therefore not a stored value at all — it's a
+<em>calculated</em> result: query all of Jordan's organization-assignment records,
+find the one whose effective date is most recent as of the date you're
+asking about, and return that. This is exactly the mechanism referenced in
+Module 3's reorg-preservation box, and it's why a report run "as of" a past
+date returns Jordan's DC West assignment even after the Boise transfer has
+happened — the query simply resolves to a different record for that date.</p>
+<p><strong>A pure transfer and a promotion-with-transfer route differently because
+they change different relationships, which condition rules can detect.</strong> A
+pure transfer only changes the <code>Worker → Supervisory_Organization</code>
+relationship. A promotion-with-transfer also changes the <code>Worker →
+Position</code> relationship to a position tied to a different compensation
+grade. The Job Change business process's condition rules (Module 4's
+mechanism) inspect which underlying relationships the specific transaction
+instance is changing — and specifically whether the new position's
+compensation grade differs from the old one — to decide whether to insert
+the compensation approval step. The routing difference isn't a special
+case Workday hardcodes for "promotions"; it falls directly out of applying
+the same grade-comparison condition rule to whatever relationship changes
+happened to be submitted.</p>
+<p><strong>Termination doesn't delete the worker record — it changes the worker's
+status attribute and lets that status drive every downstream calculation.</strong>
+The <code>Worker</code> object persists (for legal, historical, and re-hire-eligibility
+reasons); a Termination event sets an active-status attribute and an
+end-employment date on the worker's employment record. Every downstream
+system that reacts to termination — benefits eligibility calculations,
+payroll's final-pay processing, an integration that deprovisions system
+access — is really just a separate process reading that same status
+attribute and reacting to its change, not a chain of explicit "and also do
+X" instructions baked into the Termination business process itself. This is
+why a worker's full history (all staffing events, still attached to one
+persistent <code>Worker</code> object) can be reported on as a single timeline even
+after termination: nothing about the worker's past relationships was ever
+removed, only a status attribute was set.</p>
 <h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

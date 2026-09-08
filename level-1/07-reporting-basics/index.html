@@ -941,6 +941,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2272,6 +2283,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2460,6 +2482,46 @@ two reports that actually answer the <em>hiring vs. attrition</em> question aske
 and stated their filter choices out loud, which is the habit that
 separates a trustworthy report from a technically-correct-but-ambiguous
 one.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>A Workday report — standard or custom — is not a query against a snapshot
+table refreshed on a schedule. It's a <strong>live traversal of the business
+object graph</strong>, executed against the effective-dated relationship records
+described in Modules 3, 5, and 6, at the exact instant the report runs and
+for the exact date you asked it to reconstruct.</p>
+<p><strong>"As Of" dating works because every relationship record carries its own
+effective-date range, and the report engine picks the record whose range
+covers the requested date.</strong> There is no single "current org" field
+anywhere to overwrite; a <code>Worker</code>'s organization assignment is a series of
+time-bounded records, each valid from one effective date until superseded
+by the next. When you run Headcount by Supervisory Org "as of Jan 1," the
+engine doesn't roll anything back — it simply queries, for every worker,
+which assignment record's date range contains January 1st, and groups by
+that record's organization. Running the identical report "as of Jul 1"
+queries the same underlying records but a different point along each
+worker's timeline, which is exactly why the two runs can legitimately
+disagree without either being wrong — they're reconstructing two different
+true moments from the same append-only history.</p>
+<p><strong>Report prompts (organization, worker type, date range, status) are
+filters applied to the object-graph traversal, not separate report
+variants.</strong> A standard report's definition specifies which business object
+type it starts from (say, <code>Worker</code>) and which relationships it follows to
+assemble its output columns (organization, position, compensation). The
+prompts you fill in become constraints applied to that same traversal —
+"only follow this path for workers whose current organization-assignment
+record resolves to Distribution Center West or a descendant in the
+supervisory org tree" is what "Organization = DC West, including
+sub-orgs" compiles down to underneath. This is also why a forgotten filter
+produces a wrong-but-plausible answer rather than an error: leaving out the
+worker-type filter doesn't break the traversal, it just widens which
+<code>Worker</code> instances satisfy the query, silently including contingent
+workers whose relationships happen to structurally qualify.</p>
+<p><strong>Custom reports (Level 2+) use the identical traversal engine — they just
+let you choose the starting object type and the relationship paths
+yourself</strong>, via calculated fields, instead of relying on a pre-built
+definition. Understanding standard reports as "someone already chose a
+starting object and a set of relationship paths for you" is what makes
+custom report building in Level 2 feel like an extension of this module
+rather than an entirely new skill.</p>
 <h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

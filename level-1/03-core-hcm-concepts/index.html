@@ -829,6 +829,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2272,6 +2283,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2509,6 +2531,52 @@ silently reclassified.</p>
 for any new organization being built out in a tenant — and it's the
 template the Module 10 project will ask you to complete for a structure of
 your own design.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Organizations, supervisory hierarchies, positions, jobs, and workers are
+not separate features — they are distinct <strong>business object types</strong>
+connected by explicit, typed relationships in Workday's object model, and
+almost every business rule in the platform is really a rule about walking
+those relationships.</p>
+<p><strong>A supervisory organization is a business object with a <code>Superior</code>
+relationship to another supervisory organization.</strong> The nested tree you saw
+for Meridian isn't a display convenience; it <em>is</em> the data structure. Each
+<code>Supervisory_Organization</code> instance stores a reference to its parent
+org, and Workday's org-hierarchy calculations (org chart rendering, roll-up
+reporting, security scoping "by organization and subordinates") all work by
+recursively traversing that parent reference. This is also the mechanism
+behind the reorg-preservation behavior: Workday doesn't overwrite the
+parent reference when a reorg happens — it creates a new, dated
+<strong>organization-assignment effective record</strong>. Every relationship between a
+<code>Worker</code> and their <code>Supervisory_Organization</code>, and between a
+<code>Supervisory_Organization</code> and its parent, carries an effective date, so a
+report "as of" a prior date resolves the relationship as it existed on that
+date rather than reading a single current value. This effective-dating
+mechanism is a platform-wide pattern, not something specific to
+organizations — you'll see it again for compensation, security, and staffing.</p>
+<p><strong>Position Management vs. Job Management is a configuration flag on the
+supervisory organization that changes which object gets created and
+persisted.</strong> Under Position Management, a <code>Position</code> business object exists
+as a standing record the moment it's approved, independent of whether a
+<code>Worker</code> currently fills it — the <code>Position</code> object has its own identity,
+budget attributes, and history, and a Hire event <em>fills</em> an existing
+<code>Position</code> instance rather than creating one. Under Job Management, no
+persistent vacant-position record exists; the Hire event itself creates the
+job assignment relationship directly between the <code>Worker</code> and the
+supervisory organization, with no intermediate object to track when
+unfilled. This is exactly why Position Management "requires selecting an
+existing position" during Hire (you're pointing the transaction at an
+already-existing object) while Job Management lets you define the job
+inline (you're creating the only object involved, in the same transaction).</p>
+<p><strong>Employee and Contingent Worker are two subtypes of the same <code>Worker</code>
+object type, not two different object types.</strong> Both share the base worker
+schema (name, supervisory org relationship, position/job relationship), but
+contingent workers lack the relationships that connect a worker to
+<code>Compensation_Package</code> and benefit-plan objects — those relationships
+simply aren't populated for that subtype, which is why converting a
+contingent worker to an employee is handled as its own formal business
+process: it's the moment those missing relationships get established for
+the first time on a worker record that already exists, rather than a
+worker record being created from scratch.</p>
 <h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

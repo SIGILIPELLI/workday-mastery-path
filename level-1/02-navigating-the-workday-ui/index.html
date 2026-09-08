@@ -801,6 +801,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2272,6 +2283,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2470,6 +2492,47 @@ like:</p>
 <em>things routed to you</em>, and search + related actions for <em>things you go
 looking for</em> — and a fluent Workday user switches between them constantly
 without thinking about it.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>The UI patterns in this module are not independent features bolted onto
+Workday — they are all thin views over the same object-based data model and
+its security layer, which is why they behave so consistently.</p>
+<p><strong>Worklets are security-group-filtered menus, not hard-coded pages.</strong> A
+worklet's visible content is generated at render time by evaluating, for
+the logged-in user's security group memberships, which task and report
+business objects that user is authorized to access, then grouping the
+authorized ones under the worklet's category. This is the same underlying
+access-control evaluation covered in depth in Module 8 — the worklet grid
+you see is a <em>rendering</em> of a security decision, not a separate
+configuration surface. Two workers in the same tenant see different tiles
+because they resolve to different sets of authorized objects, not because
+anyone manually built two different home pages.</p>
+<p><strong>Related Actions is a per-instance, per-object-type capability list.</strong>
+When you click the related actions icon on a specific worker, Workday
+identifies the business object type of that instance (<code>Worker</code>), looks up
+every registered action definition that operates on <code>Worker</code> objects, and
+filters that list down to the ones your security group grants for that
+domain. This is why the menu contents differ by object type (a
+<code>Position</code>'s related actions menu offers different categories than a
+<code>Worker</code>'s) and why the <em>same</em> action can appear or vanish for two
+different workers you view it on, if a business process rule or security
+domain constraint evaluates differently for their specific organization or
+job profile.</p>
+<p><strong>The inbox is a live queue over business process step instances.</strong> Every
+in-flight business process (Hire, Change Job, Request Time Off) exists as a
+runtime instance moving through the ordered steps defined in its business
+process definition (Module 4 covers how those steps and routing rules are
+authored). Your inbox query is effectively "find every step instance
+currently pointing at me as the assigned approver, reviewer, or to-do
+owner." When you approve an item, you're not just clearing a UI
+notification — you're advancing that specific process instance to its next
+configured step, which may itself route to a different approver based on
+conditional rules evaluated against the transaction's data at that moment.</p>
+<p>Understanding navigation this way pays off later: once you configure
+security groups or business processes yourself, you'll be able to predict
+<em>exactly</em> which worklets, related actions, and inbox items a given worker
+will see, because all three are deterministic functions of the same
+underlying object model, security grants, and process definitions — not
+separate systems to reason about independently.</p>
 <h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

@@ -1025,6 +1025,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2261,6 +2272,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2364,6 +2386,62 @@ plain text file works) with three clearly labeled sections matching Parts
 as an indented list or diagram, business process steps as a numbered list,
 security access as a table with Domain / Access Level / Scope columns, the
 same structure Module 8's worked example used.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>This project asks you to design three artifacts on paper, but each one maps
+directly onto a real object structure inside Workday — understanding that
+structure is what separates a design that merely <em>looks</em> plausible from one
+that would actually configure cleanly in a tenant.</p>
+<p><strong>A supervisory organization is a chain of manager-position references, not
+a folder hierarchy.</strong> Workday doesn't store "Harborview Coffee Roasters" as
+a tree of nested containers the way a file system does. Each supervisory
+org is its own business object whose only structural link to the org above
+it is a pointer to that parent org's manager position. When you sketch
+Café #1 as a sub-org of Retail, what that really means in the tenant is:
+Café #1's org record carries a "reports to" reference resolving to the
+Retail org's manager position, and every worker hired into Café #1
+inherits Retail's and Headquarters' attributes (cost center rollups,
+default security group assignments, applicable business process
+definitions) through that chain of references — not by copy, but by live
+lookup evaluated at transaction time. This is why choosing Position
+Management vs. Job Management per branch (Part 1) is a structural decision,
+not a preference: it determines whether the org's roles are pre-defined
+position objects with headcount limits (each hire fills an existing
+position record) or whether hires create job requisition instances against
+an unbounded job profile — and that choice is set once on the supervisory
+org and inherited by every sub-org and worker beneath it, exactly like the
+manager-reference chain itself.</p>
+<p><strong>Business process steps execute against an ordered, conditionally-pruned
+graph, not a fixed checklist.</strong> When you design the Café Barista Hire
+process in Part 2, the step list you write down is really the <em>default</em>
+path through a directed step sequence; Workday evaluates each condition
+rule at runtime, in step order, against the specific transaction's data —
+proposed pay rate, worker rehire status, org assignment — and prunes or
+inserts steps based on the result. Your rehire-triggers-extra-review
+condition isn't a note attached to the process description; structurally
+it's a rule object bound to a specific step transition, evaluated once the
+transaction reaches that point, that reads the candidate's prior-worker
+history attribute and either advances to the default next step or reroutes
+to the inserted HR-review step. Because the rule reads live transaction
+data rather than being hardcoded per role, the same Hire business process
+definition can serve Café Barista, Roastery Technician, and a Headquarters
+Finance hire simultaneously — each transaction just evaluates the same
+condition rules against different data and takes a different path through
+the identical graph.</p>
+<p><strong>Security domain access is evaluated per-domain, per-transaction-step, not
+per-user-globally.</strong> The Café Manager security sketch in Part 3 isn't
+granting a person a role label; it's assigning their user account's
+security group membership Action or View access on specific domains (Hire
+Business Process, Compensation data), and that access is checked fresh
+every time a transaction touches that domain — not cached against the
+person. This is precisely why the compensation-visibility question in Part
+3 matters structurally: if a Café Manager's security group has View access
+scoped to "workers in their own supervisory organization" rather than
+tenant-wide, the same domain-permission rule that lets them approve a hire
+in their own café automatically evaluates to <em>no access</em> the moment the
+transaction or report crosses into a different café's org — no separate
+rule is needed to block it, because the org-hierarchy scope from the first
+point above is the same mechanism the security evaluation reads to decide
+what's in scope.</p>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Complete Parts 1, 2, and 3 above for Harborview Coffee Roasters. Then write
 a short (3-5 sentence) "design rationale" paragraph at the end, as if
