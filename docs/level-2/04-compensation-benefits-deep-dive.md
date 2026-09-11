@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 04 · Compensation & Benefits Deep Dive
 
 !!! info "Coming soon"

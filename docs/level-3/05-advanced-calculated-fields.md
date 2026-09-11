@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 05 · Advanced Calculated Fields
 
 !!! info "Coming soon"

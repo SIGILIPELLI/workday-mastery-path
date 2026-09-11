@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 06 · Workday Studio & EIB Basics
 
 !!! info "Coming soon"

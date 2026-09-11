@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 03 · Advanced Workday Financials
 
 !!! info "Coming soon"

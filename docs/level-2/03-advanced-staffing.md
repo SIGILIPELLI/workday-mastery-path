@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 03 · Advanced Staffing
 
 !!! info "Coming soon"

@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 08 · Implementation Lifecycle & Project Management for Workday
 
 !!! info "Coming soon"

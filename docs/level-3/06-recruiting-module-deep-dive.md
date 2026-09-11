@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 06 · Recruiting Module Deep Dive
 
 !!! info "Coming soon"

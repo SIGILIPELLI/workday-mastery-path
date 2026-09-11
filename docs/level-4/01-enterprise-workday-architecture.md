@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 01 · Enterprise Workday Architecture
 
 !!! info "Coming soon"

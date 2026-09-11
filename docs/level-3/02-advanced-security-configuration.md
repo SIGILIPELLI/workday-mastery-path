@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 02 · Advanced Security Configuration
 
 !!! info "Coming soon"

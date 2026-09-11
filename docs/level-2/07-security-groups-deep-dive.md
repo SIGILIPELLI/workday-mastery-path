@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 07 · Security Groups Deep Dive
 
 !!! info "Coming soon"

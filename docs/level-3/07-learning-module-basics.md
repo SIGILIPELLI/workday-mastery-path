@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 07 · Learning Module Basics
 
 !!! info "Coming soon"

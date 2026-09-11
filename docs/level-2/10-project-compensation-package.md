@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 10 · Project — Configure a Compensation Package
 
 !!! info "Coming soon"

@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 08 · Talent & Performance Management
 
 !!! info "Coming soon"

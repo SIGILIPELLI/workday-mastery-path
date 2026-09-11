@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 09 · Career Growth: Workday Analyst/Consultant Path
 
 !!! info "Coming soon"

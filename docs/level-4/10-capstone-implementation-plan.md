@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 10 · Capstone — Full Workday Implementation Plan
 
 !!! info "Coming soon"

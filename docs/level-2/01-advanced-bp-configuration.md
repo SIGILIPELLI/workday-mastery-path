@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 01 · Advanced Business Process Configuration
 
 !!! info "Coming soon"

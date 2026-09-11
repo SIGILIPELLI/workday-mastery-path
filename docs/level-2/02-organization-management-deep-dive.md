@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 02 · Organization Management Deep Dive
 
 !!! info "Coming soon"

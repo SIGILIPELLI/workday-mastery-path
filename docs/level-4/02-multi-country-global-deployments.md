@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 02 · Multi-Country/Global Deployments
 
 !!! info "Coming soon"

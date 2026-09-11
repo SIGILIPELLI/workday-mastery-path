@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 05 · Advanced Extend Development
 
 !!! info "Coming soon"

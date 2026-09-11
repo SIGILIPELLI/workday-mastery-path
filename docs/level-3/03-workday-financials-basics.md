@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 03 · Workday Financials Basics
 
 !!! info "Coming soon"

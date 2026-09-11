@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 08 · Workday Extend Basics
 
 !!! info "Coming soon"

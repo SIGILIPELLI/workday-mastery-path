@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 10 · Project — Design an Integration Specification Document
 
 !!! info "Coming soon"

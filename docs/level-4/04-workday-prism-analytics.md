@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 04 · Workday Prism Analytics
 
 !!! info "Coming soon"
