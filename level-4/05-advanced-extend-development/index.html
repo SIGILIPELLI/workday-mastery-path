@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1910,6 +1908,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Advanced Extend Development
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1926,6 +1942,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-lifecycle-management-for-extend-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application lifecycle management for Extend apps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-first-patterns-extend-apps-calling-external-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API-first patterns: Extend apps calling external systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-for-a-custom-app-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance for a custom app portfolio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-expanding-meridians-equipment-request-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: expanding Meridian's equipment request app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-lifecycle-management-for-extend-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application lifecycle management for Extend apps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-first-patterns-extend-apps-calling-external-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API-first patterns: Extend apps calling external systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-for-a-custom-app-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance for a custom app portfolio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-expanding-meridians-equipment-request-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: expanding Meridian's equipment request app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,22 +2315,182 @@
 
 
 <h1 id="05-advanced-extend-development">05 · Advanced Extend Development<a class="headerlink" href="#05-advanced-extend-development" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Coming soon</p>
-<p>This module's full lessons are being written next.
-This module will cover building and deploying custom Extend applications.</p>
-</div>
-<p>In the meantime, <a href="../../level-1/">Level 1 · Entry</a> is fully published —
-start there if you haven't yet.</p>
+<p>Level 3 Module 8 introduced Extend's building blocks. This module covers
+enterprise-scale Extend development practices: application lifecycle
+management, API-first integration patterns between custom apps and
+external systems, and governance for a portfolio of custom apps rather
+than a single one.</p>
+<h2 id="application-lifecycle-management-for-extend-apps">Application lifecycle management for Extend apps<a class="headerlink" href="#application-lifecycle-management-for-extend-apps" title="Permanent link">&para;</a></h2>
+<p>A single custom app (Level 3 Module 8's Equipment Request example) is
+manageable informally. A portfolio of dozens of custom apps across an
+enterprise needs the same tenant-migration and testing discipline (Level
+3 Module 9) applied deliberately to custom-object and orchestration
+changes, plus:</p>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Versioned custom object schemas</strong></td>
+<td>Changing a custom object's fields is itself a governed change, since existing app logic and reports may depend on the prior shape</td>
+</tr>
+<tr>
+<td><strong>App-level access review</strong></td>
+<td>Periodically re-auditing which security groups can access which custom app's domain, the same audit discipline from Level 3 Module 2</td>
+</tr>
+<tr>
+<td><strong>Deprecation process</strong></td>
+<td>Retiring an unused custom app deliberately (data retention decisions, notifying remaining users) rather than silently abandoning it</td>
+</tr>
+</tbody>
+</table>
+<h2 id="api-first-patterns-extend-apps-calling-external-systems">API-first patterns: Extend apps calling external systems<a class="headerlink" href="#api-first-patterns-extend-apps-calling-external-systems" title="Permanent link">&para;</a></h2>
+<p>Beyond orchestrating calls into Workday's own business processes (Level 3
+Module 8), an Extend app can call <strong>external</strong> APIs directly — letting a
+custom app inside Workday integrate with a non-Workday system as part of
+its own workflow, rather than requiring a separate Studio integration
+(Level 3 Module 1) running independently alongside it.</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>When it fits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Extend app calls external API directly</strong></td>
+<td>The external call is part of the <em>app's own</em> interactive workflow (e.g., checking real-time inventory before submitting a request)</td>
+</tr>
+<tr>
+<td><strong>Extend orchestration triggers a separate Studio integration</strong></td>
+<td>The external interaction is better modeled as an independent, asynchronous, scheduled process</td>
+</tr>
+</tbody>
+</table>
+<p>Choosing between these is a similar decision to Level 2 Module 6's EIB-
+vs-Studio guide: an app needing a real-time, in-workflow external check
+calls the API directly; a batch/scheduled external interaction is better
+handled as its own separate integration.</p>
+<h2 id="governance-for-a-custom-app-portfolio">Governance for a custom app portfolio<a class="headerlink" href="#governance-for-a-custom-app-portfolio" title="Permanent link">&para;</a></h2>
+<p>At enterprise scale, a Center of Excellence (Level 4 Module 8 covers this
+organizational concept) typically maintains a <strong>custom app inventory</strong> —
+what exists, who owns it, what security groups can access it, and when it
+was last reviewed — because custom apps, unlike delivered functionality,
+have no vendor-driven maintenance; an unmaintained custom app can quietly
+accumulate technical debt or unreviewed security grants (Level 3 Module 2)
+that nobody is actively responsible for catching.</p>
+<h2 id="worked-example-expanding-meridians-equipment-request-app">Worked example: expanding Meridian's equipment request app<a class="headerlink" href="#worked-example-expanding-meridians-equipment-request-app" title="Permanent link">&para;</a></h2>
+<p>Meridian's Equipment Request app (Level 3 Module 8) has been running for
+a year and now needs two enhancements: real-time stock-level checking
+against the vendor's inventory API, and expansion to a second custom app
+(a facilities ticket app) that should share some of the same underlying
+approval orchestration logic:</p>
+<ol>
+<li><strong>Schema versioning</strong>: before adding a new field to <code>Equipment_Request</code>
+   for "preferred vendor," the team reviews existing reports and
+   orchestration steps referencing the object to confirm nothing breaks
+   — the same change-impact-analysis discipline from Level 3 Module 9,
+   applied to a custom object instead of a delivered one.</li>
+<li><strong>Direct API integration</strong>: since checking vendor stock levels is part
+   of the app's own real-time submission workflow (a worker shouldn't
+   submit a request for an item that's out of stock), the app calls the
+   vendor's inventory API directly at submission time, rather than via a
+   separate scheduled Studio integration.</li>
+<li><strong>Shared orchestration logic</strong>: the approval-routing orchestration
+   built for Equipment Request (resolving the requester's manager via
+   organization hierarchy, Level 2 Module 2) is refactored into a
+   reusable orchestration component the new Facilities Ticket app also
+   calls, rather than duplicating the same manager-resolution logic in a
+   second app.</li>
+<li><strong>Portfolio governance</strong>: both apps are added to the enterprise's
+   custom app inventory, with named owners and an annual access review
+   scheduled for their respective security domains.</li>
+</ol>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Extend applications at scale face the same core tension enterprise
+architecture (Level 4 Module 1) identified for the whole tenant: shared,
+reusable components are efficient but require deliberate scoping and
+governance, precisely because a change to something shared ripples
+everywhere it's used.</p>
+<p><strong>Refactoring shared orchestration logic into a reusable component works
+because an orchestration, like a calculated field (Level 3 Module 5), is
+a referenceable object other logic can call rather than a copy-pasted
+script.</strong> When the Facilities Ticket app calls the same manager-resolution
+orchestration the Equipment Request app uses, it isn't duplicating that
+logic — it's invoking the same underlying orchestration object, the exact
+composability pattern Level 3 Module 5 described for calculated fields
+referencing other calculated fields. This is why fixing a bug in how the
+shared orchestration resolves managers (say, handling a worker with no
+current manager assignment) automatically fixes it for both apps calling
+it, without either app's own logic needing to change.</p>
+<p><strong>Direct external API calls from an Extend app's real-time workflow and a
+separate scheduled Studio integration are both ultimately the same web
+services mechanism (Level 3 Module 1) — the difference is <em>when</em> and
+<em>from where</em> the call happens, not what kind of call it is.</strong> Choosing to
+call the vendor's inventory API directly from the app's submission
+workflow, rather than via a separate integration, is a latency and
+workflow-coupling decision: the app needs the stock check's result
+<em>before</em> the worker can proceed, which only a synchronous, in-workflow
+call satisfies. A batch integration polling stock levels overnight would
+technically use the same kind of API call but couldn't satisfy a
+real-time submission-blocking requirement, because its result wouldn't
+be available at the moment the worker is filling out the form.</p>
+<p><strong>Schema versioning discipline exists because a custom object's fields are
+referenced by name from multiple, potentially unrelated places (reports,
+orchestrations, other custom objects' relationships) — exactly the same
+reason Level 3 Module 9's regression testing exists for delivered BP
+changes, applied to custom object structure instead.</strong> Removing or
+renaming a field on <code>Equipment_Request</code> without checking dependents risks
+silently breaking a report or orchestration step that referenced the old
+field name — a custom object gets no special protection from this risk
+just because a tenant's own developers built it; the same
+change-impact-analysis discipline applies precisely because nothing about
+being "custom" makes a downstream reference less real.</p>
+<h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>One-line definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schema versioning</td>
+<td>Treating custom object field changes as governed, impact-assessed changes</td>
+</tr>
+<tr>
+<td>Custom app inventory</td>
+<td>A portfolio-level record of apps, owners, and access grants</td>
+</tr>
+<tr>
+<td>Direct API integration</td>
+<td>An Extend app calling an external API synchronously within its own workflow</td>
+</tr>
+<tr>
+<td>Reusable orchestration component</td>
+<td>Shared workflow logic multiple apps call rather than duplicate</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Meridian wants a third custom app (a "Shift Swap Request" tool for store
+staff) that also needs manager approval. Describe whether it should reuse
+the existing shared manager-resolution orchestration component from the
+worked example or need its own, and identify one schema or security
+question you'd check before wiring it in, referencing the change-impact
+discipline above.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

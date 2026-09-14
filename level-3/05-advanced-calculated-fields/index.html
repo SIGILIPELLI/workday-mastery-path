@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1534,6 +1532,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Advanced Calculated Fields
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1550,6 +1566,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function categories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composability-calculated-fields-referencing-calculated-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composability: calculated fields referencing calculated fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reusability-and-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusability and governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-an-approaching-range-max-flag-at-meridian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: an "Approaching Range Max" flag at Meridian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function categories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composability-calculated-fields-referencing-calculated-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composability: calculated fields referencing calculated fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reusability-and-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusability and governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-an-approaching-range-max-flag-at-meridian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: an "Approaching Range Max" flag at Meridian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,22 +2337,208 @@
 
 
 <h1 id="05-advanced-calculated-fields">05 · Advanced Calculated Fields<a class="headerlink" href="#05-advanced-calculated-fields" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Coming soon</p>
-<p>This module's full lessons are being written next.
-This module will cover Workday's formula language with worked calculated-field examples.</p>
-</div>
-<p>In the meantime, <a href="../../level-1/">Level 1 · Entry</a> is fully published —
-start there if you haven't yet.</p>
+<p>Calculated fields have appeared throughout this path as the engine behind
+condition rules (Level 2 Module 1) and custom reports (Level 2 Module 5).
+This module treats them as their own subject: the function categories
+available, how calculated fields compose, and performance considerations
+when they're used at scale.</p>
+<h2 id="function-categories">Function categories<a class="headerlink" href="#function-categories" title="Permanent link">&para;</a></h2>
+<p>Workday's calculated field editor organizes functions into categories,
+each suited to a different kind of manipulation:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example functions</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text</strong></td>
+<td>Concatenate, Substring, Format</td>
+<td>Building display strings (e.g., "Last, First")</td>
+</tr>
+<tr>
+<td><strong>Date/Time</strong></td>
+<td>Date Difference, Add/Subtract Days</td>
+<td>Tenure calculations, deadline math</td>
+</tr>
+<tr>
+<td><strong>Numeric</strong></td>
+<td>Arithmetic operators, Round</td>
+<td>Compa-ratio, percentage calculations</td>
+</tr>
+<tr>
+<td><strong>Logical</strong></td>
+<td>If/Then/Else, Boolean AND/OR</td>
+<td>Condition rules, flag fields</td>
+</tr>
+<tr>
+<td><strong>Lookup/Related</strong></td>
+<td>Related field access</td>
+<td>Pulling a field from a related business object (e.g., grade midpoint from a worker's position)</td>
+</tr>
+<tr>
+<td><strong>Aggregate</strong></td>
+<td>Count, Sum</td>
+<td>Rolling up related object collections (e.g., count of direct reports)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="composability-calculated-fields-referencing-calculated-fields">Composability: calculated fields referencing calculated fields<a class="headerlink" href="#composability-calculated-fields-referencing-calculated-fields" title="Permanent link">&para;</a></h2>
+<p>A calculated field can reference another calculated field as one of its
+inputs, letting complex logic be built from smaller, independently
+testable pieces rather than one enormous expression. Level 2 Module 5's
+compa-ratio field, for example, could itself be an input to a further
+calculated field — an "Is Below 85% of Range" boolean flag — rather than
+repeating the division logic inline everywhere that flag is needed.</p>
+<h2 id="performance-considerations">Performance considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
+<p>Calculated fields are computed at query time (Level 2 Module 5's "How It
+Actually Works" established this), which means an expensive calculated
+field used inside a report with a large population, or inside a
+frequently-evaluated business process condition rule, has a real
+performance cost:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Consideration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nested aggregate functions (e.g., counting related objects several</td>
+<td></td>
+</tr>
+<tr>
+<td>relationships away)</td>
+<td>Can be significantly more expensive than a direct field lookup</td>
+</tr>
+<tr>
+<td>Calculated fields referencing other calculated fields</td>
+<td>Each layer adds evaluation cost — deep chains should be justified, not automatic</td>
+</tr>
+<tr>
+<td>Using a calculated field in a condition rule evaluated on every BP step transition</td>
+<td>Runs far more frequently than a report field, so complexity matters more here</td>
+</tr>
+</tbody>
+</table>
+<p>The general discipline: prefer the simplest calculated field that
+satisfies the requirement, and reserve deeply nested or aggregate-heavy
+calculations for cases (like a monthly report) where evaluation frequency
+is low, rather than a business process condition rule evaluated on every
+transaction.</p>
+<h2 id="reusability-and-governance">Reusability and governance<a class="headerlink" href="#reusability-and-governance" title="Permanent link">&para;</a></h2>
+<p>Because calculated fields can be reused across many reports and condition
+rules, a change to a shared calculated field's logic ripples everywhere
+it's referenced — which is powerful (fix once, correct everywhere) and
+also risky (an unreviewed change to a widely-used calculated field can
+silently alter behavior across many BPs and reports at once). Tenants
+with mature governance typically require calculated field changes to go
+through the same tested-in-Sandbox-before-production discipline as any
+other configuration change.</p>
+<h2 id="worked-example-an-approaching-range-max-flag-at-meridian">Worked example: an "Approaching Range Max" flag at Meridian<a class="headerlink" href="#worked-example-an-approaching-range-max-flag-at-meridian" title="Permanent link">&para;</a></h2>
+<p>Meridian's compensation team wants a reusable flag identifying workers
+whose salary is within 5% of their compensation grade's maximum — useful
+both as a report column and as a condition rule input for routing
+compensation increase requests to extra review before they'd push someone
+over the grade cap.</p>
+<ol>
+<li><strong>Base calculated field</strong>: <code>Distance to Max = (Grade_Maximum -
+   Current_Salary) / Grade_Maximum</code>, a numeric calculation referencing
+   the worker's grade (a related-field lookup) and current salary.</li>
+<li><strong>Derived calculated field</strong>: <code>Approaching Range Max = IF(Distance to
+   Max &lt; 0.05, TRUE, FALSE)</code>, a logical field referencing the first
+   calculated field rather than repeating its arithmetic.</li>
+<li><strong>Reused in two places</strong>: as a column in a compensation audit report
+   (Level 2 Module 5), and as the condition rule attached to an extra
+   approval step on the Compensation Change BP (Level 2 Module 1) for any
+   increase that would push the flag to TRUE.</li>
+<li><strong>Governance</strong>: the compensation team documents and tests this field in
+   Sandbox before activating the new BP condition step, since it now
+   affects live approval routing, not just a report.</li>
+</ol>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Calculated fields are compiled expressions stored once and evaluated
+against live data every time they're invoked, and their composability
+works because each calculated field is itself just another field a
+downstream calculation can reference — there's no structural difference
+between a "base" field and a "derived" one.</p>
+<p><strong>A calculated field referencing another calculated field creates an
+evaluation chain resolved depth-first at run time, not a copy of the
+referenced logic baked in.</strong> When "Approaching Range Max" evaluates, it
+doesn't contain a duplicated copy of the "Distance to Max" arithmetic —
+it holds a reference, and at evaluation time Workday first resolves
+"Distance to Max" for the worker in question (which itself resolves the
+worker's grade maximum and current salary), then applies the boolean
+comparison to that result. This is why correcting a bug in "Distance to
+Max" — say, discovering it should reference grade midpoint instead of
+maximum — automatically fixes every calculated field, report, and
+condition rule built on top of it, without those dependents being
+touched at all.</p>
+<p><strong>Evaluation cost compounds with chain depth and aggregate breadth, which
+is exactly why frequency of use is the key design variable, not just
+correctness.</strong> A report run once a month tolerates an expensive
+calculated field chain far better than a condition rule evaluated on
+every single Compensation Change transaction tenant-wide, because the
+same evaluation cost is paid once per report run versus once per
+transaction, at whatever transaction volume the tenant processes. This is
+why the worked example's governance step matters practically, not just
+procedurally — promoting "Approaching Range Max" from a report-only field
+to a BP condition rule changes its evaluation frequency from monthly to
+continuous, and that's the point at which a previously acceptable
+calculation cost might become a genuine concern at scale.</p>
+<p><strong>A calculated field used in a condition rule and the identical field used
+in a report are the exact same object, evaluated by the exact same
+engine — this is why testing a report-based calculated field validates
+its logic for BP use as well.</strong> There's no separate "reporting
+calculation engine" and "condition rule engine" — both consume the same
+calculated field definitions through the same evaluation mechanism. The
+worked example deliberately builds and tests the field as a report column
+first (lower stakes, easier to inspect results) before wiring the
+identical, already-validated field into a live approval-routing decision.</p>
+<h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>One-line definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Related field lookup</td>
+<td>A calculated field pulling a value from a related business object</td>
+</tr>
+<tr>
+<td>Aggregate function</td>
+<td>A calculated field summarizing a collection of related objects (Count, Sum)</td>
+</tr>
+<tr>
+<td>Calculated field chaining</td>
+<td>One calculated field referencing another as an input</td>
+</tr>
+<tr>
+<td>Evaluation frequency</td>
+<td>How often a calculation runs — the key cost driver for complex fields</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Design a calculated field chain (two or three linked fields) for Meridian
+that flags a worker as a "Retention Risk" if their compa-ratio (Level 2
+Module 5) is below 0.9 AND their tenure exceeds three years. Identify
+which of the two conditions is cheaper to evaluate and explain why
+ordering logical conditions from cheapest to most expensive inside an
+IF/AND expression can matter for performance at scale.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1214,6 +1212,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Security Groups Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1230,6 +1246,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-group-types-in-configuration-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security group types, in configuration detail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoping-unconstrained-vs-constrained-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoping: unconstrained vs. constrained groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersection-and-aggregation-groups-composing-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intersection and aggregation groups — composing access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-based-security-an-advanced-scoping-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment-based security (an advanced scoping pattern)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-meridians-regional-hr-partner-intersection-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: Meridian's regional HR Partner intersection group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-group-types-in-configuration-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security group types, in configuration detail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoping-unconstrained-vs-constrained-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoping: unconstrained vs. constrained groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersection-and-aggregation-groups-composing-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intersection and aggregation groups — composing access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-based-security-an-advanced-scoping-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment-based security (an advanced scoping pattern)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-meridians-regional-hr-partner-intersection-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: Meridian's regional HR Partner intersection group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,22 +2337,189 @@
 
 
 <h1 id="07-security-groups-deep-dive">07 · Security Groups Deep Dive<a class="headerlink" href="#07-security-groups-deep-dive" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Coming soon</p>
-<p>This module's full lessons are being written next.
-This module will cover configuring security groups, domains, and policies hands-on.</p>
-</div>
-<p>In the meantime, <a href="../../level-1/">Level 1 · Entry</a> is fully published —
-start there if you haven't yet.</p>
+<p>Level 1 Module 8 introduced domains and groups conceptually. This module
+goes deeper into the specific security group types, how scope is actually
+configured, and the aggregation patterns used to compose fine-grained
+access from simpler building blocks.</p>
+<h2 id="security-group-types-in-configuration-detail">Security group types, in configuration detail<a class="headerlink" href="#security-group-types-in-configuration-detail" title="Permanent link">&para;</a></h2>
+<p>Building on Level 1's four conceptual categories, here's what configuring
+each actually involves:</p>
+<table>
+<thead>
+<tr>
+<th>Group type</th>
+<th>Configuration mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role-Based Security Group</strong></td>
+<td>Defined by naming an <em>organization role</em> (e.g., "HR Partner"); membership auto-resolves to whoever holds that role, per org, per Module 1's live-query pattern</td>
+</tr>
+<tr>
+<td><strong>Job-Based Security Group</strong></td>
+<td>Defined by naming one or more job profiles or management levels; membership auto-resolves to anyone currently in a matching job</td>
+</tr>
+<tr>
+<td><strong>User-Based Security Group</strong></td>
+<td>An explicit, named list of individual users, maintained manually</td>
+</tr>
+<tr>
+<td><strong>Intersection Security Group</strong></td>
+<td>Members must belong to <em>all</em> of two or more specified groups simultaneously</td>
+</tr>
+<tr>
+<td><strong>Aggregation Security Group</strong></td>
+<td>Members belong to <em>any</em> of two or more specified groups (a union)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scoping-unconstrained-vs-constrained-groups">Scoping: unconstrained vs. constrained groups<a class="headerlink" href="#scoping-unconstrained-vs-constrained-groups" title="Permanent link">&para;</a></h2>
+<p>A role-based or job-based group can be <strong>unconstrained</strong> (grants apply
+company-wide) or <strong>constrained</strong> by an organizational scope — most
+commonly "the role holder's own supervisory organization and its
+subordinates." Constrained groups are what make the same "HR Partner"
+role definition produce different visible data per person, exactly as
+Level 1 Module 8 described. Configuring the constraint correctly (self and
+subordinates, vs. self only, vs. a named organization type boundary) is
+one of the most consequential decisions a security architect makes,
+because getting it wrong either over-exposes data or silently blocks
+legitimate access.</p>
+<h2 id="intersection-and-aggregation-groups-composing-access">Intersection and aggregation groups — composing access<a class="headerlink" href="#intersection-and-aggregation-groups-composing-access" title="Permanent link">&para;</a></h2>
+<p>Intersection and aggregation groups let a configurer build precise access
+without inventing a brand-new role-based group for every nuance:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intersection</strong></td>
+<td>"HR Partners" ∩ "assigned to the EMEA region" → an intersection group for EMEA-specific HR Partner access, without redefining what "HR Partner" means globally</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>"Store Manager" ∪ "Assistant Manager" → one group for a domain grant that both roles should equally have, without duplicating the grant twice</td>
+</tr>
+</tbody>
+</table>
+<p>Using intersection/aggregation groups instead of duplicating base role
+definitions keeps the underlying role and job-profile definitions clean
+and reusable — the composition, not the base building blocks, is where
+the fine-grained nuance lives.</p>
+<h2 id="segment-based-security-an-advanced-scoping-pattern">Segment-based security (an advanced scoping pattern)<a class="headerlink" href="#segment-based-security-an-advanced-scoping-pattern" title="Permanent link">&para;</a></h2>
+<p>Beyond organizational scope, <strong>security segments</strong> let particular fields
+or transactions be restricted further based on data values rather than
+org hierarchy — for example, restricting who can view a specific
+"executive compensation" segment of pay data even among users who
+otherwise have general compensation View access. This pattern exists for
+exactly the cases where organizational scope alone isn't the right
+boundary (a VP's compensation shouldn't be visible to every HR Partner who
+has general compensation View, regardless of which org that VP sits in).</p>
+<h2 id="worked-example-meridians-regional-hr-partner-intersection-group">Worked example: Meridian's regional HR Partner intersection group<a class="headerlink" href="#worked-example-meridians-regional-hr-partner-intersection-group" title="Permanent link">&para;</a></h2>
+<p>Recall Level 1 Module 8's Store Operations Analyst example. Now Meridian
+wants a <em>more</em> restricted variant: "EMEA HR Partner" access that should
+combine the standard HR Partner domain grants with a hard region boundary,
+without redefining the global HR Partner role:</p>
+<ol>
+<li><strong>Base role-based group</strong>: "HR Partner" (already exists, unconstrained
+   definition, scoped per-holder to their own org and subordinates as
+   usual).</li>
+<li><strong>Region-tagging group</strong>: "EMEA Region Assignment" — a role-based or
+   custom group whose membership reflects assignment to EMEA-tagged
+   organizations.</li>
+<li><strong>Intersection group</strong>: "HR Partner ∩ EMEA Region Assignment" — created
+   as a new security group referencing both of the above.</li>
+<li><strong>Domain grant</strong>: The EMEA-specific compensation segment's Domain
+   Security Policy grants View access to the <em>intersection</em> group, not to
+   the base HR Partner group.</li>
+</ol>
+<p>Result: an HR Partner outside EMEA never sees the EMEA-restricted
+compensation segment, and an EMEA-assigned person who isn't an HR Partner
+still can't see it either — only the intersection satisfies both grants.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>An intersection or aggregation group has no independent membership list of
+its own — its membership is computed at evaluation time from its
+constituent groups' membership, using the same live-query pattern that
+resolves role-based membership in the first place.</p>
+<p><strong>Intersection and aggregation are boolean operations evaluated over
+already-computed membership sets, not separately maintained rosters.</strong>
+When Workday checks whether a specific user belongs to the "HR Partner ∩
+EMEA Region Assignment" group, it doesn't consult a stored list for that
+composite group. It independently resolves membership in "HR Partner" (a
+live role-query, per Level 1 Module 8) and membership in "EMEA Region
+Assignment" (another live query), then returns true only if the user
+appears in both result sets. This is why the composite group's membership
+updates automatically and instantly when either underlying group's
+resolution changes — reassigning someone's role, or reassigning their
+regional tag — with zero maintenance on the intersection group definition
+itself.</p>
+<p><strong>Scope constraints on a role-based group are applied as an additional
+filter on top of the domain grant's population, evaluated per grant use,
+not baked into the group's membership.</strong> A "constrained to own org and
+subordinates" HR Partner group doesn't have a smaller membership list than
+an unconstrained one — the <em>group</em> still resolves to every HR Partner
+company-wide. The constraint is applied when a specific domain grant is
+evaluated for a specific data instance: is <em>this</em> worker's org within
+<em>this</em> particular HR Partner's own-org-and-subordinates scope. This
+two-stage evaluation (who's in the group, then does the scope cover this
+specific instance) is exactly the "group × domain × scope" intersection
+Level 1 Module 8 described, made concrete.</p>
+<p><strong>Security segments add a third filtering dimension — a data-value
+predicate — evaluated alongside, not instead of, domain and scope.</strong> An
+executive-compensation segment attaches a condition (e.g., "job level ≥
+executive") to a subset of the compensation domain's data. A user's
+overall access to view compensation still requires the domain grant and
+org scope from Level 1 Module 8 to pass first; the segment then further
+restricts which <em>specific records</em> within that already-scoped population
+are visible, based on the record's own data rather than the org tree.
+This layering is why an HR Partner with broad compensation View access
+can still be correctly blocked from seeing one VP's pay figure sitting
+inside their own scope.</p>
+<h2 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>One-line definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intersection group</td>
+<td>Membership requires belonging to all listed groups</td>
+</tr>
+<tr>
+<td>Aggregation group</td>
+<td>Membership requires belonging to any listed group</td>
+</tr>
+<tr>
+<td>Constrained group</td>
+<td>Scope limited to the role holder's own org and subordinates (typically)</td>
+</tr>
+<tr>
+<td>Security segment</td>
+<td>A data-value-based filter applied on top of domain/scope</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Design an aggregation group for Meridian combining "Store Manager" and
+"District Manager" job-based groups so both can be granted the same View
+access to a new "Store Performance Dashboard" domain in one grant.
+Then design a <em>separate</em> intersection group that would restrict a
+different, more sensitive domain to only District Managers who are also
+tagged to the "West Region." Explain in one sentence why these call for
+two different composition patterns.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
