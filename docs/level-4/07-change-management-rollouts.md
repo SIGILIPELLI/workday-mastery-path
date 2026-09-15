@@ -136,6 +136,12 @@ and transactions).
 | Go-live support | Elevated support availability immediately following a rollout |
 | Reinforcement communication | Post-go-live follow-up addressing observed adoption friction |
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 06 · Change Management for AI Tool Rollouts](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/06-change-management-rollouts/)
+- [Agile — 01 · Agile Transformation & Change Management](https://sigilipelli.github.io/agile-mastery-path/level-4/01-agile-transformation-change-management/)
+- [AI Manager — 08 · Change Management for AI Adoption](https://sigilipelli.github.io/ai-manager-mastery-path/level-2/08-change-management-ai-adoption/)
+
 ## Exercise
 
 Meridian is rolling out the Regional Merchandising Specialist role and

@@ -134,6 +134,12 @@ upgrading until we're ready" lever available at the tenant level.
 | Tenant migration | Moving specific configuration objects between tenants, not live data |
 | Regression test script | Documented scenarios re-run after changes to confirm nothing broke |
 
+## 🔀 Related lessons on other tracks
+
+- [Agile — 01 · Agile Transformation & Change Management](https://sigilipelli.github.io/agile-mastery-path/level-4/01-agile-transformation-change-management/)
+- [AI Manager — 08 · Change Management for AI Adoption](https://sigilipelli.github.io/ai-manager-mastery-path/level-2/08-change-management-ai-adoption/)
+- [AI Tools — 06 · Change Management for AI Tool Rollouts](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/06-change-management-rollouts/)
+
 ## Exercise
 
 Meridian's Workday team is about to migrate the "Executive Compensation

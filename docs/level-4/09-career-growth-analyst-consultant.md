@@ -133,6 +133,12 @@ quickly regardless of what a certificate says.
 | Solution Architect | Cross-functional design authority spanning multiple modules |
 | Hands-on practice | Real (or Sandbox) tenant configuration experience, distinct from reading alone |
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 09 · Career Growth: AI Tools Strategist/Consultant](https://sigilipelli.github.io/ai-tools-mastery-path/level-4/09-career-growth-ai-tools-strategist/)
+- [Tableau — 08 · Career Growth: Analyst to BI Leader](https://sigilipelli.github.io/tableau-mastery-path/level-4/09-career-growth-analyst-to-bi-leader/)
+- [Agile — 09 · Career Growth: Scrum Master to Agile Coach/Director](https://sigilipelli.github.io/agile-mastery-path/level-4/09-career-growth-scrum-master-to-coach/)
+
 ## Exercise
 
 Using the "What to build now" table, pick the specialization direction

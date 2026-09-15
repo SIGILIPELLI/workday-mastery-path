@@ -140,6 +140,10 @@ identical, already-validated field into a live approval-routing decision.
 | Calculated field chaining | One calculated field referencing another as an input |
 | Evaluation frequency | How often a calculation runs — the key cost driver for complex fields |
 
+## 🔀 Related lessons on other tracks
+
+- [Tableau — 06 · Calculated Fields Basics](https://sigilipelli.github.io/tableau-mastery-path/level-1/06-calculated-fields-basics/)
+
 ## Exercise
 
 Design a calculated field chain (two or three linked fields) for Meridian

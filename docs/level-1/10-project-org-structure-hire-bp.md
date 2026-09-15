@@ -145,6 +145,12 @@ rule is needed to block it, because the org-hierarchy scope from the first
 point above is the same mechanism the security evaluation reads to decide
 what's in scope.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Manager — 10 · Project — Design an MLOps Process for a Team](https://sigilipelli.github.io/ai-manager-mastery-path/level-2/10-project-mlops-process/)
+- [Product Lead — 08 · Basic Org Design for Product Teams](https://sigilipelli.github.io/product-lead-mastery-path/level-1/08-basic-org-design/)
+- [Product Manager — 10 · Capstone — Full Product Strategy + Org Design](https://sigilipelli.github.io/product-manager-mastery-path/level-4/10-capstone-strategy-org-design/)
+
 ## Exercise
 
 Complete Parts 1, 2, and 3 above for Harborview Coffee Roasters. Then write

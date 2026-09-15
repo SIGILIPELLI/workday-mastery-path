@@ -136,6 +136,10 @@ updating the top-level goal require touching every cascaded copy.
 | 9-box grid | A calculated performance × potential placement, not a stored field |
 | Succession plan | Candidate pool with readiness levels attached to a critical position |
 
+## 🔀 Related lessons on other tracks
+
+- [Product Lead — Performance Management for PMs](https://sigilipelli.github.io/product-lead-mastery-path/level-2/03-performance-management/)
+
 ## Exercise
 
 Design a condition rule (in plain language) for Meridian's review cycle
