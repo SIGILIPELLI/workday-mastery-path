@@ -1,3 +1,7 @@
+---
+description: "What Is Workday? — Workday is one of the most common enterprise systems in the working world, yet most people who use it every day couldn't explain what…"
+---
+
 # 01 · What Is Workday?
 
 Workday is one of the most common enterprise systems in the working world,

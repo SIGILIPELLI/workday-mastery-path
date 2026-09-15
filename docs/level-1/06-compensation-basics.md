@@ -1,3 +1,7 @@
+---
+description: "Compensation Basics — Compensation touches nearly every staffing event covered in Module 5 — a hire proposes pay, a promotion often changes it, a…"
+---
+
 # 06 · Compensation Basics
 
 Compensation touches nearly every staffing event covered in Module 5 — a

@@ -1,3 +1,7 @@
+---
+description: "Organization Management Deep Dive — Level 1's Module 3 introduced supervisory organizations as the backbone of staffing. This module goes deeper into the…"
+---
+
 # 02 · Organization Management Deep Dive
 
 Level 1's Module 3 introduced supervisory organizations as the backbone of

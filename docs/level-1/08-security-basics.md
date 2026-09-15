@@ -1,3 +1,7 @@
+---
+description: "Security Basics — Every module so far has quietly depended on security: which worklets you see (Module 2), which reports you can run (Module 7), which…"
+---
+
 # 08 · Security Basics
 
 Every module so far has quietly depended on security: which worklets you

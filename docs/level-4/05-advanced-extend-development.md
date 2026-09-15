@@ -1,3 +1,7 @@
+---
+description: "Advanced Extend Development — Level 3 Module 8 introduced Extend's building blocks. This module covers enterprise-scale Extend development practices…"
+---
+
 # 05 · Advanced Extend Development
 
 Level 3 Module 8 introduced Extend's building blocks. This module covers

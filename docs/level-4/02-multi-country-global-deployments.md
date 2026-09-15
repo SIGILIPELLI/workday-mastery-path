@@ -1,3 +1,7 @@
+---
+description: "Multi-Country/Global Deployments — This module covers what changes when a Workday tenant operates across many countries at once — localization, statutory…"
+---
+
 # 02 · Multi-Country/Global Deployments
 
 This module covers what changes when a Workday tenant operates across

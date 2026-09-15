@@ -1,3 +1,7 @@
+---
+description: "Testing & Change Management in Workday — Every module so far has referenced 'test in Sandbox before production' in passing. This module makes that…"
+---
+
 # 09 · Testing & Change Management in Workday
 
 Every module so far has referenced "test in Sandbox before production" in

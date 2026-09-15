@@ -1,3 +1,7 @@
+---
+description: "Project — Configure a Compensation Package — This module is a project, not a new concept lesson: apply Level 2's compensation, eligibility, and security…"
+---
+
 # 10 · Project — Configure a Compensation Package
 
 This module is a project, not a new concept lesson: apply Level 2's

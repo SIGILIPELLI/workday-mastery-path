@@ -1,3 +1,7 @@
+---
+description: "Advanced Staffing — Level 1 Module 5 covered hire, transfer, and termination as the three core staffing transactions under a single staffing model. This…"
+---
+
 # 03 · Advanced Staffing
 
 Level 1 Module 5 covered hire, transfer, and termination as the three core

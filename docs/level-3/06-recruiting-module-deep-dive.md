@@ -1,3 +1,7 @@
+---
+description: "Recruiting Module Deep Dive — This module covers Workday Recruiting — the module governing job requisitions, candidate pipelines, and offers — and how it…"
+---
+
 # 06 · Recruiting Module Deep Dive
 
 This module covers Workday Recruiting — the module governing job

@@ -1,3 +1,7 @@
+---
+description: "Learning Module Basics — This module introduces Workday Learning — course/content management, assignment rules, and how completion data connects back to…"
+---
+
 # 07 · Learning Module Basics
 
 This module introduces Workday Learning — course/content management,

@@ -1,3 +1,7 @@
+---
+description: "Navigating the Workday UI — Workday's interface looks sparse compared to older enterprise systems — a search bar, a grid of icons, a profile picture — and…"
+---
+
 # 02 · Navigating the Workday UI
 
 Workday's interface looks sparse compared to older enterprise systems — a

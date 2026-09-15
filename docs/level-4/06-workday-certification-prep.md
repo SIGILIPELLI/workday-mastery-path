@@ -1,3 +1,7 @@
+---
+description: "Workday Certification Prep — This module is a study guide, not a new concept lesson: it maps Workday's official certification tracks to what this path has…"
+---
+
 # 06 · Workday Certification Prep
 
 This module is a study guide, not a new concept lesson: it maps

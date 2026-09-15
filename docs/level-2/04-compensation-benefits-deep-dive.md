@@ -1,3 +1,7 @@
+---
+description: "Compensation & Benefits Deep Dive — Level 1 Module 6 introduced compensation grades and ranges. This module goes deeper into how compensation packages are…"
+---
+
 # 04 · Compensation & Benefits Deep Dive
 
 Level 1 Module 6 introduced compensation grades and ranges. This module

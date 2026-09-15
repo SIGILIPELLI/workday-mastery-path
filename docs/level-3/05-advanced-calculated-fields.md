@@ -1,3 +1,7 @@
+---
+description: "Advanced Calculated Fields — Calculated fields have appeared throughout this path as the engine behind condition rules (Level 2 Module 1) and custom…"
+---
+
 # 05 · Advanced Calculated Fields
 
 Calculated fields have appeared throughout this path as the engine behind

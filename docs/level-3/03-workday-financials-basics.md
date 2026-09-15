@@ -1,3 +1,7 @@
+---
+description: "Workday Financials Basics — This module introduces Workday Financial Management — a separate but architecturally related product to HCM, sharing the same…"
+---
+
 # 03 · Workday Financials Basics
 
 This module introduces Workday Financial Management — a separate but

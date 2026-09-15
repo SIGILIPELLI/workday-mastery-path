@@ -1,3 +1,7 @@
+---
+description: "Payroll Fundamentals — This module covers Workday Payroll conceptually — how pay is actually calculated from the staffing, compensation, absence, and time…"
+---
+
 # 04 · Payroll Fundamentals
 
 This module covers Workday Payroll conceptually — how pay is actually

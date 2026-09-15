@@ -1,3 +1,7 @@
+---
+description: "Project — Design a Simple Org Structure & Hire Business Process — This capstone project pulls together every Level 1 module into one paper deliverable…"
+---
+
 # 10 · Project — Design a Simple Org Structure & Hire Business Process
 
 This capstone project pulls together every Level 1 module into one paper

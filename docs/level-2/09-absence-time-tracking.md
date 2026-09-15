@@ -1,3 +1,7 @@
+---
+description: "Absence & Time Tracking — This module covers two related but distinct Workday modules: Absence Management (time off, leave balances) and Time Tracking…"
+---
+
 # 09 · Absence & Time Tracking
 
 This module covers two related but distinct Workday modules: Absence

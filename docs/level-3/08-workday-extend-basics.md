@@ -1,3 +1,7 @@
+---
+description: "Workday Extend Basics — This module introduces Workday Extend — the platform for building custom applications that run natively inside Workday, sharing…"
+---
+
 # 08 · Workday Extend Basics
 
 This module introduces Workday Extend — the platform for building

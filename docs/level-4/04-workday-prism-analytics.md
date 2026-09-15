@@ -1,3 +1,7 @@
+---
+description: "Workday Prism Analytics — This module covers Workday Prism Analytics — the platform's data-lake and advanced-analytics layer for blending Workday data…"
+---
+
 # 04 · Workday Prism Analytics
 
 This module covers Workday Prism Analytics — the platform's data-lake

@@ -1,3 +1,7 @@
+---
+description: "Enterprise Workday Architecture — This module steps back from individual modules and features to the architecture-level view: how a large enterprise…"
+---
+
 # 01 · Enterprise Workday Architecture
 
 This module steps back from individual modules and features to the

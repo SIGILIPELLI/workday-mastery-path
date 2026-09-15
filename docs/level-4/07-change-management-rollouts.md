@@ -1,3 +1,7 @@
+---
+description: "Change Management for Workday Rollouts — Level 3 Module 9 covered technical testing and release discipline. This module covers the organizational side of…"
+---
+
 # 07 · Change Management for Workday Rollouts
 
 Level 3 Module 9 covered technical testing and release discipline. This

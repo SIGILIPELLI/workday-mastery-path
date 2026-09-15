@@ -1,3 +1,7 @@
+---
+description: "Business Processes Basics — If Module 3's organizations and workers are Workday's nouns, business processes are its verbs — the configured workflows that…"
+---
+
 # 04 · Business Processes Basics
 
 If Module 3's organizations and workers are Workday's *nouns*, business

@@ -1,3 +1,7 @@
+---
+description: "Integration Basics Overview — Workday doesn't operate in isolation — payroll vendors, benefits carriers, badge/access systems, and dozens of other…"
+---
+
 # 09 · Integration Basics Overview
 
 Workday doesn't operate in isolation — payroll vendors, benefits carriers,

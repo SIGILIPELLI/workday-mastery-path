@@ -1,3 +1,7 @@
+---
+description: "Advanced Security Configuration — Level 2 Module 7 covered security group types and composition. This module covers configuring security at the tenant…"
+---
+
 # 02 · Advanced Security Configuration
 
 Level 2 Module 7 covered security group types and composition. This

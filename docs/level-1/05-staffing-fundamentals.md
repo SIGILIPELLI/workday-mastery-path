@@ -1,3 +1,7 @@
+---
+description: "Staffing Fundamentals — With organizations, workers, and business processes established, this module walks through the three most common staffing…"
+---
+
 # 05 · Staffing Fundamentals
 
 With organizations, workers, and business processes established, this

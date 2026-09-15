@@ -1,3 +1,7 @@
+---
+description: "Advanced Reporting — Level 1 Module 7 covered running and reading standard reports. This module covers building custom reports — the report types…"
+---
+
 # 05 · Advanced Reporting
 
 Level 1 Module 7 covered running and reading standard reports. This module

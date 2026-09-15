@@ -1,3 +1,7 @@
+---
+description: "Workday Studio & EIB Basics — Level 1 Module 9 introduced integrations conceptually. This module introduces the two most common Level-2-accessible tools…"
+---
+
 # 06 · Workday Studio & EIB Basics
 
 Level 1 Module 9 introduced integrations conceptually. This module

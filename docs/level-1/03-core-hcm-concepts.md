@@ -1,3 +1,7 @@
+---
+description: "Core HCM Concepts — Everything in Workday HCM — every hire, every approval, every report — sits on top of a handful of foundational objects…"
+---
+
 # 03 · Core HCM Concepts
 
 Everything in Workday HCM — every hire, every approval, every report —

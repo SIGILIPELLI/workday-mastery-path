@@ -1,3 +1,7 @@
+---
+description: "Security Groups Deep Dive — Level 1 Module 8 introduced domains and groups conceptually. This module goes deeper into the specific security group types…"
+---
+
 # 07 · Security Groups Deep Dive
 
 Level 1 Module 8 introduced domains and groups conceptually. This module

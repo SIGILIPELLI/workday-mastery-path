@@ -1,3 +1,7 @@
+---
+description: "Career Growth: Workday Analyst/Consultant Path — This module steps outside the platform itself to cover the career paths this expertise opens up — the…"
+---
+
 # 09 · Career Growth: Workday Analyst/Consultant Path
 
 This module steps outside the platform itself to cover the career paths

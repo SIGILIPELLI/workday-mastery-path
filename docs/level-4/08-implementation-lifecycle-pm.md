@@ -1,3 +1,7 @@
+---
+description: "Implementation Lifecycle & Project Management for Workday — This module covers how a Workday implementation project is actually run end to end — the…"
+---
+
 # 08 · Implementation Lifecycle & Project Management for Workday
 
 This module covers how a Workday implementation project is actually run

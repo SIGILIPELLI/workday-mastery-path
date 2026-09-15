@@ -1,3 +1,7 @@
+---
+description: "Project — Design an Integration Specification Document — This module is a project: write a full Integration Specification Document (Integration Spec) …"
+---
+
 # 10 · Project — Design an Integration Specification Document
 
 This module is a project: write a full **Integration Specification

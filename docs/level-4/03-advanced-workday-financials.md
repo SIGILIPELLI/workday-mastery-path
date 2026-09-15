@@ -1,3 +1,7 @@
+---
+description: "Advanced Workday Financials — Level 3 Module 3 introduced Financials fundamentals — worktags, core business processes, the chart of accounts. This module…"
+---
+
 # 03 · Advanced Workday Financials
 
 Level 3 Module 3 introduced Financials fundamentals — worktags, core

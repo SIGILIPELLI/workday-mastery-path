@@ -1,3 +1,7 @@
+---
+description: "Advanced Business Process Configuration — Level 1's Module 4 treated a business process (BP) as a black box: steps route, conditions branch, approvals…"
+---
+
 # 01 · Advanced Business Process Configuration
 
 Level 1's Module 4 treated a business process (BP) as a black box: steps

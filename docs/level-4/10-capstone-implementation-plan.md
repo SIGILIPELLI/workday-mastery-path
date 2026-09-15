@@ -1,3 +1,7 @@
+---
+description: "Capstone — Full Workday Implementation Plan — This is the path's capstone project: design a complete, end-to-end implementation plan for a realistic new…"
+---
+
 # 10 · Capstone — Full Workday Implementation Plan
 
 This is the path's capstone project: design a complete, end-to-end

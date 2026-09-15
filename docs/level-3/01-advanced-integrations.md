@@ -1,3 +1,7 @@
+---
+description: "Advanced Integrations — Level 2 Module 6 introduced EIB and previewed Workday Studio. This module goes deeper into Studio-built integrations, the…"
+---
+
 # 01 · Advanced Integrations
 
 Level 2 Module 6 introduced EIB and previewed Workday Studio. This module

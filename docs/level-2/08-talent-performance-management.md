@@ -1,3 +1,7 @@
+---
+description: "Talent & Performance Management — This module introduces Workday's Talent and Performance functionality — the modules governing performance reviews…"
+---
+
 # 08 · Talent & Performance Management
 
 This module introduces Workday's Talent and Performance functionality —

@@ -1,3 +1,7 @@
+---
+description: "Reporting Basics — Every concept covered so far — organizations, workers, business processes, compensation — eventually gets consumed through a report.…"
+---
+
 # 07 · Reporting Basics
 
 Every concept covered so far — organizations, workers, business processes,
