@@ -3,7 +3,7 @@
 Free, structured, module-wise Workday HCM and Financials training — entry
 level to master level. Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
-Live site: https://sigilipelli.github.io/workday-mastery-path/
+Live site: https://learnmasterypath.com/workday-mastery-path/
 
 ## Local development
 

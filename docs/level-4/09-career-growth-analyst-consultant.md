@@ -135,9 +135,9 @@ quickly regardless of what a certificate says.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 09 · Career Growth: AI Tools Strategist/Consultant](https://sigilipelli.github.io/ai-tools-mastery-path/level-4/09-career-growth-ai-tools-strategist/)
-- [Tableau — 08 · Career Growth: Analyst to BI Leader](https://sigilipelli.github.io/tableau-mastery-path/level-4/09-career-growth-analyst-to-bi-leader/)
-- [Agile — 09 · Career Growth: Scrum Master to Agile Coach/Director](https://sigilipelli.github.io/agile-mastery-path/level-4/09-career-growth-scrum-master-to-coach/)
+- [AI Tools — 09 · Career Growth: AI Tools Strategist/Consultant](https://learnmasterypath.com/ai-tools-mastery-path/level-4/09-career-growth-ai-tools-strategist/)
+- [Tableau — 08 · Career Growth: Analyst to BI Leader](https://learnmasterypath.com/tableau-mastery-path/level-4/09-career-growth-analyst-to-bi-leader/)
+- [Agile — 09 · Career Growth: Scrum Master to Agile Coach/Director](https://learnmasterypath.com/agile-mastery-path/level-4/09-career-growth-scrum-master-to-coach/)
 
 ## Exercise
 

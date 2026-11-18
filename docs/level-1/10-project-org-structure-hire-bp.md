@@ -147,9 +147,9 @@ what's in scope.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Manager — 10 · Project — Design an MLOps Process for a Team](https://sigilipelli.github.io/ai-manager-mastery-path/level-2/10-project-mlops-process/)
-- [Product Lead — 08 · Basic Org Design for Product Teams](https://sigilipelli.github.io/product-lead-mastery-path/level-1/08-basic-org-design/)
-- [Product Manager — 10 · Capstone — Full Product Strategy + Org Design](https://sigilipelli.github.io/product-manager-mastery-path/level-4/10-capstone-strategy-org-design/)
+- [AI Manager — 10 · Project — Design an MLOps Process for a Team](https://learnmasterypath.com/ai-manager-mastery-path/level-2/10-project-mlops-process/)
+- [Product Lead — 08 · Basic Org Design for Product Teams](https://learnmasterypath.com/product-lead-mastery-path/level-1/08-basic-org-design/)
+- [Product Manager — 10 · Capstone — Full Product Strategy + Org Design](https://learnmasterypath.com/product-manager-mastery-path/level-4/10-capstone-strategy-org-design/)
 
 ## Exercise
 

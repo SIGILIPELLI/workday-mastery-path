@@ -142,7 +142,7 @@ identical, already-validated field into a live approval-routing decision.
 
 ## 🔀 Related lessons on other tracks
 
-- [Tableau — 06 · Calculated Fields Basics](https://sigilipelli.github.io/tableau-mastery-path/level-1/06-calculated-fields-basics/)
+- [Tableau — 06 · Calculated Fields Basics](https://learnmasterypath.com/tableau-mastery-path/level-1/06-calculated-fields-basics/)
 
 ## Exercise
 

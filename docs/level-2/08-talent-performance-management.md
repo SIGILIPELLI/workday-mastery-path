@@ -138,7 +138,7 @@ updating the top-level goal require touching every cascaded copy.
 
 ## 🔀 Related lessons on other tracks
 
-- [Product Lead — Performance Management for PMs](https://sigilipelli.github.io/product-lead-mastery-path/level-2/03-performance-management/)
+- [Product Lead — Performance Management for PMs](https://learnmasterypath.com/product-lead-mastery-path/level-2/03-performance-management/)
 
 ## Exercise
 
