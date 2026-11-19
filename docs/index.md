@@ -68,7 +68,7 @@ sandbox or training tenant (through an employer or a Workday Learning
 subscription), you can follow along directly inside it; menu names and
 navigation described here match recent Workday releases.
 
-🎥 **Prefer video?** Watch the [Mastery Path video series](https://youtube.com/@sigilipelli) on YouTube — Shorts and full walkthroughs of these lessons.
+🎥 **Prefer video?** Watch the [Mastery Path video series](https://youtube.com/@learnmasterypath) on YouTube — Shorts and full walkthroughs of these lessons.
 
 ## More from the Mastery Path series
 
