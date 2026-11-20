@@ -1,3 +1,7 @@
+---
+description: "Level 2 (Intermediate) of the free Workday Mastery Path. Go from understanding Workday's core concepts to configuring them — advanced business process…"
+---
+
 # Level 2 · Intermediate <span class="level-badge">Intermediate</span>
 
 Goal: go from understanding Workday's core concepts to configuring them —

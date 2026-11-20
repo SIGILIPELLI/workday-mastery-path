@@ -6,6 +6,7 @@ repo_name: workday-mastery-path
 
 theme:
   name: material
+  font: false
   favicon: assets/favicon.svg
   custom_dir: docs/overrides
   palette:
@@ -24,6 +25,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    - navigation.path
     - navigation.tabs
     - navigation.sections
     - navigation.expand
@@ -54,6 +56,18 @@ extra_css:
 
 extra_javascript:
   - javascripts/progress-tracker.js
+
+
+
+
+extra:
+  related:
+    - name: "English Fluency & IELTS"
+      url: https://learnmasterypath.com/english-fluency-mastery-path/
+    - name: "Digital Marketing & SEO"
+      url: https://learnmasterypath.com/digital-marketing-mastery-path/
+    - name: "Tally Prime & GST"
+      url: https://learnmasterypath.com/tally-gst-mastery-path/
 
 nav:
   - Home: index.md

@@ -1,6 +1,6 @@
 ---
 title: "Learn Workday HCM Free: Beginner to Master Course"
-description: "Free Workday HCM and Financials course covering navigation, business processes, staffing, compensation, reporting, security, and integrations, beginner to advanced. Part of a 39-course free learning library."
+description: "Free Workday HCM and Financials course covering navigation, business processes, staffing, compensation, reporting, security, and integrations, beginner to advanced. Part of a 100+ course free learning library."
 ---
 
 # Workday Mastery Path

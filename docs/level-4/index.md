@@ -1,3 +1,7 @@
+---
+description: "Level 4 (Master) of the free Workday Mastery Path. Operate at an enterprise scale — architecture, global deployments, advanced Financials, Prism Analytics…"
+---
+
 # Level 4 · Master <span class="level-badge">Master</span>
 
 Goal: operate at an enterprise scale — architecture, global deployments,

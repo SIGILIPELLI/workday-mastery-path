@@ -1,3 +1,7 @@
+---
+description: "Level 3 (Advanced) of the free Workday Mastery Path. Build advanced integration and security skills, get a working foundation in Workday Financials and…"
+---
+
 # Level 3 · Advanced <span class="level-badge">Advanced</span>
 
 Goal: build advanced integration and security skills, get a working

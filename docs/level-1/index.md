@@ -1,3 +1,7 @@
+---
+description: "Level 1 (Entry) of the free Workday Mastery Path. Understand what Workday is and how it's organized, get comfortable navigating the UI, learn the core HCM…"
+---
+
 # Level 1 · Entry <span class="level-badge">Foundations</span>
 
 Goal: understand what Workday is and how it's organized, get comfortable
