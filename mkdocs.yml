@@ -53,9 +53,11 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/progress-tracker.css
+  - stylesheets/final-quiz.css
 
 extra_javascript:
   - javascripts/progress-tracker.js
+  - javascripts/final-quiz.js
 
 
 
@@ -123,3 +125,5 @@ nav:
       - "08 · Implementation Lifecycle & Project Management": level-4/08-implementation-lifecycle-pm.md
       - "09 · Career Growth: Workday Analyst/Consultant Path": level-4/09-career-growth-analyst-consultant.md
       - "10 · Capstone — Full Workday Implementation Plan": level-4/10-capstone-implementation-plan.md
+  - "🎯 Final Quiz": quiz.md
+
