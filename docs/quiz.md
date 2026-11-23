@@ -21,7 +21,7 @@ you can retake it as many times as you like. Your best result is saved in this b
       "0.8 1.15"
     ],
     "correctIndex": 1,
-    "explanation": "Compa-ratio compares to the midpoint; penetration places the salary within the range. (A Python model of the concept using made-up data; Workday itself was not available.) Verified by running it."
+    "explanation": "Compa-ratio compares to the midpoint; penetration places the salary within the range. (A Python model of the concept using made-up data; Workday itself was not used.) The Python was run and its output checked."
   },
   {
     "question": "A 5% merit increase takes effect 1 July on a 60,000 salary. What is the in-year (6 of 12 months) cost? \n```python\nprint(60000*0.05*6/12)\n```\n",
@@ -32,7 +32,7 @@ you can retake it as many times as you like. Your best result is saved in this b
       "750.0"
     ],
     "correctIndex": 1,
-    "explanation": "Prorate the annual increase for the months remaining. (A Python model of the concept using made-up data; Workday itself was not available.) Verified by running it."
+    "explanation": "Prorate the annual increase for the months remaining. (A Python model of the concept using made-up data; Workday itself was not used.) The Python was run and its output checked."
   },
   {
     "question": "Gross 6,000; pre-tax deduction 500; tax 18% of taxable pay; post-tax deduction 200. What is net pay?\n```python\ngross=6000; pre=500\ntax=(gross-pre)*0.18\nprint(round(gross-pre-tax-200,2))\n```\n",
@@ -43,7 +43,7 @@ you can retake it as many times as you like. Your best result is saved in this b
       "4310.0"
     ],
     "correctIndex": 3,
-    "explanation": "Pre-tax deductions reduce taxable income; post-tax come out afterwards. (A Python model of the concept using made-up data; Workday itself was not available.) Verified by running it."
+    "explanation": "Pre-tax deductions reduce taxable income; post-tax come out afterwards. (A Python model of the concept using made-up data; Workday itself was not used.) The Python was run and its output checked."
   },
   {
     "question": "A user is in groups {A, B}. Is an intersection group of (A, C) satisfied, and an aggregation group of (A, C)?\n```python\nu={'A','B'}\nprint({'A','C'}<=u, bool({'A','C'}&u))\n```\n",
@@ -54,7 +54,7 @@ you can retake it as many times as you like. Your best result is saved in this b
       "False False"
     ],
     "correctIndex": 0,
-    "explanation": "Intersection is AND; aggregation is OR. (A Python model of the concept using made-up data; Workday itself was not available.) Verified by running it."
+    "explanation": "Intersection is AND; aggregation is OR. (A Python model of the concept using made-up data; Workday itself was not used.) The Python was run and its output checked."
   },
   {
     "question": "A journal has debits 1,500 and credits 900 + 600. Is it balanced?\n```python\nprint(1500==900+600)\n```\n",
@@ -65,7 +65,7 @@ you can retake it as many times as you like. Your best result is saved in this b
       "True"
     ],
     "correctIndex": 3,
-    "explanation": "Debits must equal credits. (A Python model of the concept using made-up data; Workday itself was not available.) Verified by running it."
+    "explanation": "Debits must equal credits. (A Python model of the concept using made-up data; Workday itself was not used.) The Python was run and its output checked."
   },
   {
     "question": "What is effective dating?",
