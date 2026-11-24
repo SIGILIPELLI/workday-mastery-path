@@ -21,8 +21,3 @@ growth into a Workday analyst/consultant path.
 8. [Implementation Lifecycle & Project Management](08-implementation-lifecycle-pm.md)
 9. [Career Growth: Workday Analyst/Consultant Path](09-career-growth-analyst-consultant.md)
 10. [Capstone — Full Workday Implementation Plan](10-capstone-implementation-plan.md)
-
-!!! info "Content status"
-    Level 4 module content is being written — every page below has its
-    scope defined and will be filled in next. [Level 1](../level-1/index.md)
-    is complete and is the prerequisite for everything here.

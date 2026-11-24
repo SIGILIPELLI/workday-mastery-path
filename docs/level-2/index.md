@@ -22,8 +22,3 @@ absence/time tracking.
 8. [Talent & Performance Management](08-talent-performance-management.md)
 9. [Absence & Time Tracking](09-absence-time-tracking.md)
 10. [Project — Configure a Compensation Package](10-project-compensation-package.md)
-
-!!! info "Content status"
-    Level 2 module content is being written — every page below has its
-    scope defined and will be filled in next. [Level 1](../level-1/index.md)
-    is complete and is the prerequisite for everything here.

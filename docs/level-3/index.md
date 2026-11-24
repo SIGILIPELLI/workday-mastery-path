@@ -20,8 +20,3 @@ and go deep on Recruiting, Learning, and Workday Extend.
 8. [Workday Extend Basics](08-workday-extend-basics.md)
 9. [Testing & Change Management in Workday](09-testing-change-management.md)
 10. [Project — Integration Specification Document](10-project-integration-spec.md)
-
-!!! info "Content status"
-    Level 3 module content is being written — every page below has its
-    scope defined and will be filled in next. [Level 1](../level-1/index.md)
-    is complete and is the prerequisite for everything here.
