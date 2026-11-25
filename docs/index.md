@@ -32,8 +32,7 @@ introduced in the later levels.
   single running fictional company so the scenarios build on each other.
 - Each topic ends with a cheat-sheet table of the key terms and concepts
   covered, plus an **Exercise** to apply the workflow on paper.
-- Each level ends with a project that combines everything learned in that
-  level into one deliverable.
+- Levels 1–3 each end with a project that combines everything learned in that level into one deliverable.
 - Use the search bar (top of the page) to jump straight to a topic.
 
 Start here → [Level 1 · Entry](level-1/index.md)
